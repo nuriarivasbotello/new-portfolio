@@ -1,0 +1,59 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.menu {
+  width: 100%;
+  height: calc(100vh - 80px);
+  text-align: center;
+  position: fixed;
+  top: 104px;
+  padding: 50px 24px;
+  transform: translateX(100%);
+  transition: transform 0.4s;
+  z-index: 1;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: black;
+background-color: none;
+  //background:var(--color-gradient);
+
+  // @include responsive(desktop) {
+  //   height: 0;
+  //   display: flex;
+  //   justify-content: end;
+  //   align-items: center;
+  //   position: relative;
+  //   top: -50px;
+  //   transition: none;
+  //   gap: 1.5625rem;
+  //   padding: 0 165px;
+  //   transform: translateX(0);
+  //   z-index: 0;
+  //   font-size: 13px;
+  //   color: white;
+  // }
+}
+
+.toggle-menu {
+  // @include responsive(desktop) {
+  //   display: none;
+  // }
+}
+.menu--show {
+  transform: translateX(0);
+}
+
+.menu__item {
+  margin-bottom: 48px;
+
+  @include responsive(desktop) {
+    margin-bottom: 0;
+
+    @include hover {
+      color:var(--color-terciary);;
+    }
+  }
+}
+.menu-icon{
+  width: 60px;
+}
