@@ -8,17 +8,18 @@
   position: fixed;
   top: 104px;
   padding: 50px 24px;
-  transform: translateX(100%);
+  transform: translateX(110%);
   transition: transform 0.3s;
   z-index: 1;
   font-size: 20px;
   letter-spacing: 2px;
   color: black;
-  background:var(--color-gradient);
+
 
   @include responsive(desktop) {
    display: flex;
    flex-direction: column;
+   position: fixed;
   }
 }
 

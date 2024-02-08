@@ -1,10 +1,11 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .main{
-    margin:100px 30px;
+    margin:40px 30px;
     display: flex;
     flex-direction: column;
     transform: translateX(0);
+    color:var(--primary-color);
   transition: transform 0.4s;
     @include responsive(desktop) {
         padding: 30px 300px 0 300px;

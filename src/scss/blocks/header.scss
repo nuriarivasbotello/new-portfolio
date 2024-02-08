@@ -2,6 +2,7 @@
 
 .header {
   color: black;
+  
   @include responsive(desktop) {
     position: relative;
     z-index: 10;
