@@ -1,6 +1,11 @@
+@use '../mixins/responsive.scss' as *;
 html {
 }
 body {
-    
+    overflow-x: hidden;
     background-image: url('/assets/images/noise.png');
+    @include responsive(desktop) {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 }

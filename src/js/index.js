@@ -11,15 +11,15 @@ function handleClick() {
   if (menuElement.classList.contains('menu--show')) {
     //  console.log('MENU ABIERTO');
     mainElement.classList.add('main--show');
-    menuIcon.src = './assets/images/2.png';
+    menuIcon.src = './assets/images/hamburguesa on.png';
   } else {
     // console.log('MENU CERRADO');
-    menuIcon.src = './assets/images/1.png';
+    menuIcon.src = './assets/images/hamburguesa off.png';
     mainElement.classList.remove('main--show');
   }
 }
 
-buttonElement.addEventListener('click', handleClick);
+menuIcon.addEventListener('click', handleClick);
 // const button = document.getElementById('button');
 
 // button.addEventListener('click', () => {

@@ -10,18 +10,25 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    //position: fixed;
     top: 0;
     align-items: center;
-    overflow: hidden;
+    //overflow: hidden;
     padding: 24px;
     z-index: 1;
-    background-color: none;
-
     @include responsive(desktop) {
-      position: relative;
+      //position: relative;
       padding: 30px 165px;
       z-index: 0;
     }
+  }
+}
+.idiom{
+  font-family: var(--font-title);
+  color:var(--primary-color);
+  font-weight: bold;
+  font-size: 20px;
+  @include responsive(desktop) {
+    font-size: 20px;
   }
 }
