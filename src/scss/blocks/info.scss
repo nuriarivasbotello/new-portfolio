@@ -3,10 +3,25 @@
 .info{
     display:flex;
     flex-direction: column;
+    margin:auto;
+    text-align: center;
     align-items: center;
+    @include responsive(desktop) {
+        position: relative;
+        right:70px;
+    }
     &__aboutme{
         font-family: var(--font-text);
-        font-size: 20px;
+        font-size: 25px;
+        line-height: 30px;
+        @include responsive(desktop) {
+            width: 620px;
+            position: relative;
+            bottom:40px;
+            font-size: 30px;
+            line-height: 50px;
+
+        }
     }
     &__links{
         display: flex;
@@ -15,5 +30,9 @@
         gap:30px;
         font-family:var(--font-text);
         font-size: 18px;
+        @include responsive(desktop) {
+            font-size: 20px;
+            top:-20px;
+        }
     }
 }

@@ -4,22 +4,30 @@
 .menu {
   width: 100%;
   height: calc(100vh - 80px);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
   position: fixed;
-  top: 104px;
-  padding: 50px 24px;
+  padding: 100px 110px;
   transform: translateX(110%);
   transition: transform 0.3s;
   z-index: 1;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: black;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: var(--font-title);
+  color:var(--primary-color);
 
 
   @include responsive(desktop) {
    display: flex;
    flex-direction: column;
    position: fixed;
+   padding: 100px 750px;
+   font-family: var(--font-title);
+   font-size: 50px;
+   gap:40px;
+   //background-color: red;
+   color:var(--primary-color);
   }
 }
 
@@ -45,7 +53,7 @@
     margin-bottom: 0;
 
     @include hover {
-      color: black;;
+      color:var(--primary-color);
     }
   }
 }

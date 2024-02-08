@@ -1,8 +1,14 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/responsive.scss' as *;
 .title{
+  font-size: 35px;
   font-family: var(--font-title);
+  background-image: url('/assets/images/linea.svg');
+  background-position: 178px;
+  background-repeat: no-repeat;
   @include responsive(desktop) {
-    font-size: 40px;
+    font-size: 50px;
+    background-image: url('/assets/images/linea.svg');
+    background-position: 250px;
   }
 }

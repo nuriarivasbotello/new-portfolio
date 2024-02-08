@@ -8,15 +8,25 @@
     color:var(--primary-color);
   transition: transform 0.4s;
     @include responsive(desktop) {
-        padding: 30px 300px 0 300px;
+        margin:0;
+        padding:100px;
         flex-direction: row;
-        justify-content: space-between;
-    }
-    &__icon{
-        width: 500px;
+        gap:50px;
+        align-items: center;
     }
 }
 
+.icon{
+    width: 300px;
+    margin:auto;
+    align-items: center;
+    @include responsive(desktop) {
+        width: 600px;
+        position: relative;
+        left:80px;
+    }
+
+}
 .main--show{
     transform: translateX(110%);
 }
