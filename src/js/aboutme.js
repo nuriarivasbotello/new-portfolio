@@ -2,7 +2,7 @@
 
 import '../scss/styles.scss';
 const menuElement = document.getElementById('menu-aboutme');
-const menuIcon = document.getElementById('menu-icon-about');
+const menuIcon = document.getElementById('menu-icon');
 const aboutmeElement = document.getElementById('main-aboutme');
 
 function handleClick() {
@@ -10,10 +10,10 @@ function handleClick() {
   if (menuElement.classList.contains('menu--show')) {
     //  console.log('MENU ABIERTO');
     aboutmeElement.classList.add('about--show');
-    menuIcon.src = '/assets/images/hamburguesaon.png';
+    menuIcon.src = '../assets/images/hamburguesaon.png';
   } else {
     // console.log('MENU CERRADO');
-    menuIcon.src = '/assets/images/hamburguesaoff.png';
+    menuIcon.src = '../assets/images/hamburguesaoff.png';
     aboutmeElement.classList.remove('about--show');
   }
 }
