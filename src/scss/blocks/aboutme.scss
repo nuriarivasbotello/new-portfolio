@@ -2,35 +2,31 @@
 @use '../mixins/hover.scss' as *;
 
 .aboutme{
-    
-    display: flex;
-    flex-direction: column;
-    transform: translateX(0);
-    color:var(--primary-color);
-  transition: transform 0.4s;
-    @include responsive(desktop) {
-        color:blue
-    }
-    &__title{
-        @include responsive(desktop) {}
-    }
-    &__text{
-        @include responsive(desktop) {}
-    }
-    &__link{
-        @include responsive(desktop) {}
-    }
-}
-.menu--show {
+  margin:40px 30px;
+  display: flex;
+  flex-direction: column;
   transform: translateX(0);
+  color:var(--primary-color);
+transition: transform 0.4s;
   @include responsive(desktop) {
-    display: flex;
-    
+      margin:0;
+      padding:100px;
+      gap:50px;
+      align-items: center;
   }
 }
-  .none{
-    display: none;
+
+.icon{
+  width: 300px;
+  margin:auto;
+  align-items: center;
+  @include responsive(desktop) {
+      width: 600px;
+      position: relative;
+      left:80px;
   }
-  .color{
-    color:blue
-  }
+
+}
+.main--show{
+  transform: translateX(110%);
+}

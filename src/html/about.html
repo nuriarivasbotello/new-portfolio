@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="header__top">
-        <a href="../index.html">
+        <a href="../index.html" id="home">
           <img
           src="../assets/images/logo.png"
           alt="logo"/></a>
@@ -21,7 +21,7 @@
         <p class="idiom">EN</p>
         <img src="../assets/images/moon.png"/>
           <img
-            id="menu-icon-about"
+            id="menu-icon"
             class="menu-icon"
             src="../assets/images/hamburguesaoff.png"
             alt="menu"
@@ -31,10 +31,10 @@
       <nav class="nav">
         <ul
           class="menu"
-          id="menu-aboutme"
+          id="menu"
         >
           <li class="menu__item">
-            <a
+            <a id="projects"
               class="menu__link"
               href="../html/projects.html"
             >
@@ -42,15 +42,15 @@
             </a>
           </li>
           <li class="menu__item">
-            <a
-              class="menu__link transition-link"
+            <a id="aboutme"
+              class="menu__link"
               href="../html/about.html"
             >
               02 SOBRE MI
             </a>
           </li>
           <li class="menu__item">
-            <a
+            <a id="contact"
               class="menu__link"
               href="../html/contact.html"
             >
@@ -60,7 +60,7 @@
         </ul>
       </nav>
     </header>
-    <main id="main-about-me" class="aboutme">
+    <main id="main" class="aboutme">
        <h2 class="aboutme__title">Hola, ¿Qué tal?</h2>
         <p class="aboutme__text">Soy Nuria Rivas y creé el nombre de nuriva para hacer una marca más personal designada al diseño gráfico. A pesar de que aún me queda mucho por aprender por todo lo que va evolucionando el diseño y la programación (Y la vida en general), siempre estoy dispuesta a adquirir todo el conocimiento que pueda. Me gusta mucho toda la cultura de las décadas de los 80's y los 90's pero no me considero dentro de ningún estilo, hago lo que me gusta y lo que siento en ese momento y siempre intento aportar mi granito de arena en lo que pueda. Lo más importante, recuerda beber "awita" y tomarte tu tiempo para respirar profundo. ¡Nos vemos! </p>
         <a href="" class="aboutme__link">¡Mira mi cv!!</a>
@@ -68,6 +68,5 @@
     </main>
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
     <script type="module" src="../js/index.js"></script>
-    <script type="module" src="../js/aboutme.js"></script>
   </body>
 </html>

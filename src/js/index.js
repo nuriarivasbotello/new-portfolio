@@ -12,6 +12,7 @@ function handleClick() {
   if (menuElement.classList.contains('menu--show')) {
     //  console.log('MENU ABIERTO');
     mainElement.classList.add('main--show');
+
     menuIcon.src = hamburguesaOn;
   } else {
     // console.log('MENU CERRADO');
