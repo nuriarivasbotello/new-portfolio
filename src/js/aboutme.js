@@ -1,13 +1,13 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 
 import '../scss/styles.scss';
-const menuElement = document.getElementById('menu-aboutme');
+const menuElementAbout = document.getElementById('menu-aboutme');
 const menuIconAbout = document.getElementById('menu-icon-about');
-const aboutmeElement = document.getElementById('main-aboutme');
+const aboutmeElement = document.getElementById('main');
 
 function handleClick() {
   menuElement.classList.toggle('menu--show');
-  if (menuElement.classList.contains('menu--show')) {
+  if (menuElementAbout.classList.contains('menu--show')) {
     //  console.log('MENU ABIERTO');
     aboutmeElement.classList.add('about--show');
     menuIconAbout.src = '../assets/images/hamburguesaon.png';

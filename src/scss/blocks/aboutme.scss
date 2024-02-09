@@ -2,10 +2,10 @@
 @use '../mixins/hover.scss' as *;
 
 .aboutme{
+    transform: translateX(0);
+   transition: transform 0.4s;
     @include responsive(desktop) {
         color:red;
-        transform: translateX(0);
-  transition: transform 0.4s;
     }
     &__title{
         @include responsive(desktop) {}

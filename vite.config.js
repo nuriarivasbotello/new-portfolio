@@ -5,7 +5,7 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
   plugins: [ViteMinifyPlugin({}), ViteImageOptimizer({})],
-  base: '',
+  base: 'https://nuriarivasbotello.github.io/new-portfolio/',
   root: 'src',
   build: {
     rollupOptions: {
