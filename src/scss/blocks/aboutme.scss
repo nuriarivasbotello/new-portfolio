@@ -2,10 +2,14 @@
 @use '../mixins/hover.scss' as *;
 
 .aboutme{
+    
+    display: flex;
+    flex-direction: column;
     transform: translateX(0);
-   transition: transform 0.4s;
+    color:var(--primary-color);
+  transition: transform 0.4s;
     @include responsive(desktop) {
-        color:red;
+        color:blue
     }
     &__title{
         @include responsive(desktop) {}
@@ -17,8 +21,15 @@
         @include responsive(desktop) {}
     }
 }
-.about--show {
-    transform: translateX(110%);
+.menu--show {
+  transform: translateX(0);
+  @include responsive(desktop) {
+    display: flex;
+    
+  }
+}
+  .none{
+    display: none;
   }
   .color{
     color:blue
