@@ -12,7 +12,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/index.html'),
         about: resolve(__dirname, 'src/html/about.html'),
-        contact: resolve(__dirname, 'src/html/contact.html')
+        contact: resolve(__dirname, 'src/html/contact.html'),
+        projects: resolve(__dirname, 'src/html/projects.html')
         // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
       }
     },
