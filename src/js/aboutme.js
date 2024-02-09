@@ -1,20 +1,20 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 
 import '../scss/styles.scss';
-const menuElement = document.getElementById('menu');
-const menuIcon = document.getElementById('menu-icon');
-const mainElement = document.getElementById('main');
+const menuElement = document.getElementById('menu-aboutme');
+const menuIcon = document.getElementById('menu-icon-about');
+const aboutmeElement = document.getElementById('main-aboutme');
 
 function handleClick() {
   menuElement.classList.toggle('menu--show');
   if (menuElement.classList.contains('menu--show')) {
     //  console.log('MENU ABIERTO');
-    mainElement.classList.add('main--show');
-    menuIcon.src = './assets/images/hamburguesaon.png';
+    aboutmeElement.classList.add('about--show');
+    menuIcon.src = '/assets/images/hamburguesaon.png';
   } else {
     // console.log('MENU CERRADO');
-    menuIcon.src = './assets/images/hamburguesaoff.png';
-    mainElement.classList.remove('main--show');
+    menuIcon.src = '/assets/images/hamburguesaoff.png';
+    aboutmeElement.classList.remove('about--show');
   }
 }
 

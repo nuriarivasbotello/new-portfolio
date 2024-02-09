@@ -5,11 +5,69 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite Template</title>
+    <title>Sobre Mi</title>
   </head>
   <body>
-    
+    <header class="header">
+      <div class="header__top">
+        <a href="../index.html">
+          <img
+          src="/assets/images/logo.png"
+          alt="logo"/></a>
+        <div
+          id="toggle-menu"
+          class="toggle-menu"
+        >
+        <p class="idiom">EN</p>
+        <img src="/assets/images/moon.png"/>
+          <img
+            id="menu-icon-about"
+            class="menu-icon"
+            src="/assets/images/hamburguesaoff.png"
+            alt="menu"
+          />
+        </div>
+      </div>
+      <nav class="nav">
+        <ul
+          class="menu"
+          id="menu-aboutme"
+        >
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/html/projects.html"
+            >
+              01 PROYECTOS
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__link transition-link"
+              href="/html/about.html"
+            >
+              02 SOBRE MI
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/html/contact.html"
+            >
+              03 CONTACTO
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-aboutme" class="aboutme">
+      <section class="">
+        <h2 class="aboutme__title">Hola, ¿Qué tal?</h2>
+        <p class="aboutme__text">Soy Nuria Rivas y creé el nombre de nuriva para hacer una marca más personal designada al diseño gráfico. A pesar de que aún me queda mucho por aprender por todo lo que va evolucionando el diseño y la programación (Y la vida en general), siempre estoy dispuesta a adquirir todo el conocimiento que pueda. Me gusta mucho toda la cultura de las décadas de los 80's y los 90's pero no me considero dentro de ningún estilo, hago lo que me gusta y lo que siento en ese momento y siempre intento aportar mi granito de arena en lo que pueda. Lo más importante, recuerda beber "awita" y tomarte tu tiempo para respirar profundo. ¡Nos vemos! </p>
+        <a href="" class="aboutme__link">¡Mira mi cv!</a>
+      </section>
+    </main>
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
-    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/aboutme.js"></script>
   </body>
 </html>

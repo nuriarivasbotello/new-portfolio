@@ -1,0 +1,25 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.aboutme{
+    @include responsive(desktop) {
+        color:red;
+        transform: translateX(0);
+  transition: transform 0.4s;
+    }
+    &__title{
+        @include responsive(desktop) {}
+    }
+    &__text{
+        @include responsive(desktop) {}
+    }
+    &__link{
+        @include responsive(desktop) {}
+    }
+}
+.about--show {
+    transform: translateX(110%);
+  }
+  .color{
+    color:blue
+  }

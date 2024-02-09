@@ -1,0 +1,31 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+.stars{
+    @include responsive(desktop) {}
+    &__first{
+        position: relative;
+        bottom:320px;
+        left:170px;
+        @include responsive(desktop) {
+            bottom:380px;
+            left:200px;
+        }
+    }
+    &__second{
+        position: relative;
+        @include responsive(desktop) {
+            bottom:200px;
+            right:280px;
+
+        }
+    }
+    &__third{
+        position: relative;
+        
+        @include responsive(desktop) {
+            bottom:270px;
+            left:300px;
+
+        }
+    }
+}
