@@ -2,7 +2,7 @@
 
 import '../scss/styles.scss';
 const menuElement = document.getElementById('menu-aboutme');
-const menuIcon = document.getElementById('menu-icon');
+const menuIcon = document.getElementById('menu-icon-about');
 const aboutmeElement = document.getElementById('main-aboutme');
 
 function handleClick() {
