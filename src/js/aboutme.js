@@ -10,10 +10,10 @@ function handleClick() {
   if (menuElementAbout.classList.contains('menu--show')) {
     //  console.log('MENU ABIERTO');
     aboutmeElement.classList.add('about--show');
-    menuIconAbout.src = '../assets/images/hamburguesaon.png';
+    menuIconAbout.src = './assets/images/hamburguesaon.png';
   } else {
     // console.log('MENU CERRADO');
-    menuIconAbout.src = '../assets/images/hamburguesaoff.png';
+    menuIconAbout.src = './assets/images/hamburguesaoff.png';
     aboutmeElement.classList.remove('about--show');
   }
 }

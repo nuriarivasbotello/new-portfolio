@@ -1,7 +1,8 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 
 import '../scss/styles.scss';
-
+import hamburguesaOn from '/assets/images/hamburguesaon.png';
+import hamburguesaOff from '/assets/images/hamburguesaoff.png';
 const menuElement = document.getElementById('menu');
 const menuIcon = document.getElementById('menu-icon');
 const mainElement = document.getElementById('main');
@@ -11,10 +12,10 @@ function handleClick() {
     //  console.log('MENU ABIERTO');
     mainElement.classList.add('main--show');
 
-    menuIcon.src = '/assets/images/hamburguesaon.png';
+    menuIcon.src = hamburguesaOn;
   } else {
     // console.log('MENU CERRADO');
-    menuIcon.src = '/assets/images/hamburguesaoff.png';
+    menuIcon.src = hamburguesaOff;
 
     mainElement.classList.remove('main--show');
   }
