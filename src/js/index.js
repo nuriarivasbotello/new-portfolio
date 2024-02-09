@@ -20,8 +20,8 @@ function handleClick() {
 
 menuIcon.addEventListener('click', handleClick);
 
-// const button = document.getElementById('button');
+const button = document.getElementById('aboutme');
 
-// button.addEventListener('click', () => {
-//   console.log('BUTTON CLICKED');
-// });
+button.addEventListener('click', () => {
+  console.log('BUTTON CLICKED');
+});
