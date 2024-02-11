@@ -2,18 +2,21 @@
 @use '../mixins/hover.scss' as *;
 
 .menu {
+  width: 100%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
   overflow-x: hidden;
   position: fixed;
   padding-left:40px;
-  transform: translateX(180%);
+  transform: translateX(100%);
   transition: transform 0.3s;
   font-size: 30px;
   letter-spacing: 3px;
   font-family: var(--font-title);
   color:var(--primary-color);
+  //background-image: url('/assets/images/noise.png');
   //background-color: red;
 
   @include responsive(desktop) {

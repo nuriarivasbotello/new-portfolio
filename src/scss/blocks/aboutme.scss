@@ -9,8 +9,10 @@
   align-items: center; 
   overflow-y: hidden;
   overflow-x: hidden;
-  transform: translateX(0);
-  transition: transform 0.4s;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  // transform: translateX(0);
+  // transition: transform 0.4s;
   color:var(--primary-color);
   @include responsive(desktop) {
     flex-direction: row;
@@ -47,7 +49,8 @@
   }
 }
 .main--show{
+  opacity: 0;
   position: absolute;
-    top: -9999px;
+  top: -9999px;
   //transform: translateX(110%);
 }
