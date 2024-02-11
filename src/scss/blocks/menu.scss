@@ -17,7 +17,7 @@
   letter-spacing: 3px;
   font-family: var(--font-title);
   color:var(--primary-color);
-  //background-color: red;
+  background-color: red;
 
   @include responsive(desktop) {
    display: flex;
