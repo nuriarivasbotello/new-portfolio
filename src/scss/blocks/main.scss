@@ -2,13 +2,14 @@
 @use '../mixins/hover.scss' as *;
 .main{
     //margin:40px 30px;
+    max-width: 100%;
     overflow-y: hidden;
   overflow-x: hidden;
     display: flex;
     flex-direction: column;
     transform: translateX(0);
+    transition: transform 0.4s;
     color:var(--primary-color);
-  transition: transform 0.4s;
   //background-color: blue;
     @include responsive(desktop) {
         margin:0;
@@ -31,5 +32,6 @@
 
 }
 .main--show{
+
     transform: translateX(110%);
 }

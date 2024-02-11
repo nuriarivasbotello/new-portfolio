@@ -2,22 +2,22 @@
 @use '../mixins/hover.scss' as *;
 
 .menu {
-  //height: calc(100vh - 80px);
+  //max-width: 100%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   //align-items: center;
   overflow-y: hidden;
   overflow-x: hidden;
   position: fixed;
-  padding: 100px 90px;
-  transform: translateX(110%);
+  transform: translateX(180%);
   transition: transform 0.3s;
   //z-index: 1;
   font-size: 30px;
   letter-spacing: 3px;
   font-family: var(--font-title);
   color:var(--primary-color);
-  background-color: red;
+  //background-color: red;
 
   @include responsive(desktop) {
    display: flex;
