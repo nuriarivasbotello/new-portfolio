@@ -2,10 +2,7 @@
 @use '../mixins/hover.scss' as *;
 
 .menu {
-  width: 100%;
   //height: calc(100vh - 80px);
-  overflow-y: hidden;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   //align-items: center;
@@ -18,7 +15,6 @@
   letter-spacing: 3px;
   font-family: var(--font-title);
   color:var(--primary-color);
-
 
   @include responsive(desktop) {
    display: flex;
