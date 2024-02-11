@@ -7,8 +7,8 @@
   overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    transform: translateX(0);
-    transition: transform 0.4s;
+    //transform: translateX(0);
+    //transition: transform 0.4s;
     color:var(--primary-color);
   //background-color: blue;
     @include responsive(desktop) {
@@ -32,6 +32,6 @@
 
 }
 .main--show{
-
-    transform: translateX(110%);
+display:none;
+    //transform: translateX(110%);
 }
