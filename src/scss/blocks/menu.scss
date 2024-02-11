@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   //align-items: center;
+  width:100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
   position: fixed;
   padding: 100px 110px;
   transform: translateX(110%);
