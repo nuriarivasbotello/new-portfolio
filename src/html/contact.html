@@ -8,7 +8,88 @@
     <title>Contacto</title>
   </head>
   <body>
-   
+    <header class="header">
+      <div class="header__top">
+        <a href="../index.html" id="home">
+          <img
+          src="../assets/images/logo.png"
+          alt="logo"/></a>
+        <div
+          id="toggle-menu"
+          class="toggle-menu"
+        >
+        <p class="idiom">EN</p>
+        <img src="../assets/images/moon.png"/>
+          <img
+            id="menu-icon"
+            class="menu-icon"
+            src="../assets/images/hamburguesaoff.png"
+            alt="menu"
+          />
+        </div>
+      </div>
+      <nav class="nav">
+        <ul
+          class="menu"
+          id="menu"
+        >
+          <li class="menu__item">
+            <a id="projects"
+              class="menu__link"
+              href="../html/projects.html"
+            >
+              01 PROYECTOS
+            </a>
+          </li>
+          <li class="menu__item">
+            <a id="aboutme"
+              class="menu__link"
+              href="../html/about.html"
+            >
+              02 SOBRE MI
+            </a>
+          </li>
+          <li class="menu__item">
+            <a id="contact"
+              class="menu__link"
+              href="../html/contact.html"
+            >
+              03 CONTACTO
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="contact">
+      <h2 class="contact__title">Contacto</h2>
+      <section class="contact__info"> 
+       <section class="form" id="contact">
+        <!-- <h2 class=" title-contour contact-me">¡Hablemos!</h2> -->
+        <form action="form.php" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label for="name">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div>
+            <label for="name">Mensaje</label>
+            <textarea name="form-message" id="message"></textarea>
+          </div>
+          <input type="submit" value="Enviar" />
+        </form>
+       </section>
+       <div class="social-media">
+        <article>Linkedin</article>
+        <article>GITHUB</article>
+        <article>Behance</article>
+        <article>Instagram</article>
+       </div>
+       <p class="email">nuriarivasbotello@gmail.com</p>
+      </section>
+    </main>
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
     <script type="module" src="../js/index.js"></script>
   </body>
