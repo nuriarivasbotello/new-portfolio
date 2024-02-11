@@ -2,17 +2,43 @@
 @use '../mixins/hover.scss' as *;
 
 .aboutme{
-  margin:40px 30px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transform: translateX(0);
   color:var(--primary-color);
 transition: transform 0.4s;
   @include responsive(desktop) {
-      margin:0;
-      padding:100px;
-      gap:50px;
+    flex-direction: row;
+      
       align-items: center;
+  }
+  &__info{
+    padding: 50px;
+    @include responsive(desktop) {
+      padding-left:180px;
+    }
+  }
+  &__title{
+    font-size: 50px;
+    font-family:var(--font-title);
+    @include responsive(desktop) {
+    }
+  }
+  &__text{
+    font-size: 20px;
+    font-family:var(--font-text);
+    @include responsive(desktop) {
+      width: 900px;
+      font-size: 30px;
+    }
+  }
+  &__image{
+    align-items: center;
+    @include responsive(desktop) {
+      position: relative;
+      right:300px;
+    }
   }
 }
 .main--show{
