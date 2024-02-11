@@ -2,9 +2,6 @@
 @use '../mixins/hover.scss' as *;
 
 .menu {
-  width: 100%;
-  height: calc(100vh - 80px);
-  text-align: center;
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
