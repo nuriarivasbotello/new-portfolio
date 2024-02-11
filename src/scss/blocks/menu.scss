@@ -6,11 +6,10 @@
   display: flex;
   flex-direction: column;
   //align-items: center;
-  width:100%;
   overflow-y: hidden;
   overflow-x: hidden;
   position: fixed;
-  padding: 100px 110px;
+  padding: 100px 90px;
   transform: translateX(110%);
   transition: transform 0.3s;
   //z-index: 1;
@@ -18,6 +17,7 @@
   letter-spacing: 3px;
   font-family: var(--font-title);
   color:var(--primary-color);
+  //background-color: red;
 
   @include responsive(desktop) {
    display: flex;
