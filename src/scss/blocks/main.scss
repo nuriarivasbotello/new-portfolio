@@ -4,13 +4,13 @@
     //margin:40px 30px;
     max-width: 100%;
     overflow-y: hidden;
-  overflow-x: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     //transform: translateX(0);
     //transition: transform 0.4s;
     opacity: 1;
-  transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
     color:var(--primary-color);
   //background-color: blue;
     @include responsive(desktop) {
@@ -26,6 +26,7 @@
     width: 300px;
     margin:auto;
     align-items: center;
+    padding: 40px 0;
     @include responsive(desktop) {
         width: 600px;
         position: relative;
