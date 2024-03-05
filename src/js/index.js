@@ -35,14 +35,18 @@ function mostrarImagen(event) {
     imagen.src = imagenes[nombreElemento];
     imagen.style.display = 'block';
   }
-  setTimeout(function () {
-    imagen.style.display = 'none'; // Ocultar la imagen después de 2 segundos
-  }, 2000);
+}
+
+// Función para ocultar la imagen cuando se quita el ratón del elemento
+function ocultarImagen() {
+  var imagen = document.getElementById('imagen');
+  imagen.style.display = 'none';
 }
 
 // Asignar eventos de mouse a los elementos de lista
 var elementosLista = document.querySelectorAll('li');
 elementosLista.forEach(function (elemento) {
-  elemento.addEventListener('mouseover', mostrarImagen);
+  elemento.addEventListener('mouseenter', mostrarImagen);
+  elemento.addEventListener('mouseleave', ocultarImagen);
 });
 menuIcon.addEventListener('click', handleClick);
