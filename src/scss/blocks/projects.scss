@@ -1,0 +1,20 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+/* Estilo para la lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para los elementos de la lista */
+li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para las imágenes */
+#imagen {
+    display: none;
+    max-width: 200px;
+    max-height: 200px;
+}
