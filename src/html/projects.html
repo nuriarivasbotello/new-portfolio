@@ -5,6 +5,19 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Estilos opcionales */
+      #imagen {
+          display: none;
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+      }
+  
+      li {
+          cursor: pointer;
+      }
+  </style>
     <title>Proyectos</title>
   </head>
   <body>
@@ -60,16 +73,16 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Lista de Nombres</h1>
-      <ul id="lista">
-        <li data-imagen="./assets/images/imagen1.jpg">Nombre 1</li>
-        <li data-imagen="./assets/images/imagen2.jpg">Nombre 2</li>
-        <li data-imagen="./assets/images/imagen3.jpg">Nombre 3</li>
-      </ul>
-      <!-- Imagen asociada al nombre -->
-      <img id="imagen" src="" alt="Imagen">
-      
+    <main  id="main" class="project">
+      <h2 class="aboutme__title">Proyectos</h2>
+<ul>
+    <li id="elemento1">Elemento 1</li>
+    <li id="elemento2">Elemento 2</li>
+    <li id="elemento3">Elemento 3</li>
+</ul>
+
+<img id="imagen" src="" alt="Imagen">
+
     </main>
    
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->

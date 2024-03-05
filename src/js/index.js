@@ -20,28 +20,29 @@ function handleClick() {
     mainElement.classList.remove('main--show');
   }
 }
-// Función para mostrar la imagen asociada al nombre cuando pasas el cursor sobre el elemento
+// Objeto con los nombres de los elementos y las URL de las imágenes asociadas
+var imagenes = {
+  elemento1: 'imagen1.jpg',
+  elemento2: 'imagen2.jpg',
+  elemento3: 'imagen3.jpg'
+};
+
+// Función para mostrar la imagen asociada al elemento cuando se pasa el ratón sobre él
 function mostrarImagen(event) {
-  var nombreElemento = event.target.getAttribute('data-imagen');
+  var nombreElemento = event.target.id;
   var imagen = document.getElementById('imagen');
-  if (nombreElemento) {
-    imagen.src = nombreElemento;
+  if (nombreElemento in imagenes) {
+    imagen.src = imagenes[nombreElemento];
     imagen.style.display = 'block';
   }
+  setTimeout(function () {
+    imagen.style.display = 'none'; // Ocultar la imagen después de 2 segundos
+  }, 2000);
 }
 
-// Función para ocultar la imagen cuando sacas el cursor del elemento
-function ocultarImagen() {
-  var imagen = document.getElementById('imagen');
-  imagen.style.display = 'none';
-}
-
-// Obtener la lista de nombres
-var listaNombres = document.getElementById('lista').getElementsByTagName('li');
-
-// Asignar eventos de ratón a cada elemento de la lista
-for (var i = 0; i < listaNombres.length; i++) {
-  listaNombres[i].addEventListener('mouseover', mostrarImagen);
-  listaNombres[i].addEventListener('mouseout', ocultarImagen);
-}
+// Asignar eventos de mouse a los elementos de lista
+var elementosLista = document.querySelectorAll('li');
+elementosLista.forEach(function (elemento) {
+  elemento.addEventListener('mouseover', mostrarImagen);
+});
 menuIcon.addEventListener('click', handleClick);
