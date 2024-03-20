@@ -27,13 +27,7 @@ li {
     @include responsive(desktop) {
       display: grid;
       padding-top:50px;
-      padding-right:960px;
-    }
-    &__elements{
-      display: flex;
-      flex-direction: column;
-      font-size:25px;
-      gap:20px;
+      padding-right:800px;
     }
     &__title{
       font-size: 40px;
@@ -47,30 +41,44 @@ li {
         background-position: 0;
       }
     }
-    &__lists{
+    &__list{
       display: flex;
+      flex-direction: column;
       @include responsive(desktop) {
-
+        gap: 30px;
+      }
+    }
+    &__elements{
+      display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap:100px;
+      @include responsive(desktop) {
+        height: 30px;
+        gap:300px;
+      }
+    }
+    &__name-project{
+      font-size: 20px;
+      @include responsive(desktop) {
+        font-size: 25px;
       }
     }
     &__type{
-      display: flex;
-      flex-direction: column;
-      font-size:25px;
+      font-size: 15px;
       @include responsive(desktop) {
-        position: relative;
-        left:400px;
-
+        font-size: 20px;
       }
-      gap:20px;
     }
     &__image{
       opacity:0;
       @include responsive(desktop) {
-        display:flex;
-        flex-direction: column;
+        width: 400px;
+        height: 400px;
         opacity:100%;
-        margin-left:1400px;
+        margin-left:1000px;
+        margin-top:150px;
         background-color: red;
       }
 
