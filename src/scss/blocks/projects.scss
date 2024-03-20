@@ -1,4 +1,6 @@
 /* Estilos opcionales */
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
 #imagen {
     display: none;
     max-width: 100%;
@@ -8,4 +10,49 @@
 
 li {
     cursor: pointer;
+}
+.projects{
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    // transform: translateX(0);
+    // transition: transform 0.4s;
+    color:var(--primary-color);
+    @include responsive(desktop) {
+      display: grid;
+      padding-top:50px;
+      padding-right:1160px;
+    }
+    &__title{
+      font-size: 40px;
+      font-family:var(--font-title);
+      background-image: url('/assets/images/linea.svg');
+      background-repeat: no-repeat;
+      background-position: 0;
+      @include responsive(desktop) {
+        font-size: 50px;
+        background-repeat: no-repeat;
+        background-position: 0;
+      }
+    }
+    &__image{
+      @include responsive(desktop) {
+      padding-left:800px;
+      }
+
+    }
+  }
+  .main--show{
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    //transform: translateX(110%);
+  
+  
 }

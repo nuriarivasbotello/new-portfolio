@@ -24,7 +24,12 @@ function handleClick() {
 var imagenes = {
   elemento1: 'imagen1.jpg',
   elemento2: 'imagen2.jpg',
-  elemento3: 'imagen3.jpg'
+  elemento3: 'imagen3.jpg',
+  elemento4: 'imagen3.jpg',
+  elemento5: 'imagen3.jpg',
+  elemento6: 'imagen3.jpg',
+  elemento7: 'imagen3.jpg',
+  elemento8: 'imagen3.jpg'
 };
 
 // Función para mostrar la imagen asociada al elemento cuando se pasa el ratón sobre él
