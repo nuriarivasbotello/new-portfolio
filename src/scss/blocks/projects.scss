@@ -74,12 +74,13 @@ li {
     &__image{
       opacity:0;
       @include responsive(desktop) {
-        width: 400px;
-        height: 400px;
+        width: 600px;
+        //height: 400px;
         opacity:100%;
         margin-left:1000px;
         margin-top:150px;
         background-color: red;
+        box-shadow: 0px 0px 30px #5755;
       }
 
     }

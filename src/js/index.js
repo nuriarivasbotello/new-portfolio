@@ -22,12 +22,12 @@ function handleClick() {
 }
 // Objeto con los nombres de los elementos y las URL de las imágenes asociadas
 var imagenes = {
-  elemento1: 'imagen1.jpg',
-  elemento2: 'imagen2.jpg',
+  elemento1: '../public/assets/images/portada nuriva.png',
+  elemento2: '../public/assets/images/portada revista.png',
   elemento3: 'imagen3.jpg',
   elemento4: 'imagen3.jpg',
   elemento5: 'imagen3.jpg',
-  elemento6: 'imagen3.jpg',
+  elemento6: '../public/assets/images/travel.jpg',
   elemento7: 'imagen3.jpg',
   elemento8: 'imagen3.jpg'
 };
