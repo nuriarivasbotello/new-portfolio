@@ -1,12 +1,32 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+body{
+    @include responsive(desktop) {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+}
 .mosaic {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px;
-    padding: 10px;
+    grid-template-columns:50% 50%;
+    margin:auto;
+    padding-top:60px;
+    padding-left:20px;
+    gap:10px;
+    @include responsive(desktop) {
+        width: 1800px;
+        grid-template-columns:25% 25% 25% 25%;
+        justify-content: space-between;
+    }
+    
   }
   .tile {
+    width: 180px;
     position: relative;
     overflow: hidden;
+    @include responsive(desktop) {
+        width: 300px;
+    }
   }
   
   .tile img {
@@ -16,7 +36,7 @@
   }
   
   .tile:hover img {
-    filter: brightness(1.2);
+    filter: brightness(0.8);
   }
   
   .overlay {
@@ -25,7 +45,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    background-color: rgba(0, 0, 0, 1); /* Fondo oscuro semitransparente */
     display: none;
     justify-content: center;
     align-items: center;
@@ -38,6 +58,5 @@
   .overlay img {
     max-width: 80%;
     max-height: 80%;
-    border: 5px solid #fff;
     cursor: zoom-out;
   }
