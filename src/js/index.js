@@ -3,7 +3,7 @@
 import '../scss/styles.scss';
 import hamburguesaOn from '/assets/images/hamburguesaon.png';
 import hamburguesaOff from '/assets/images/hamburguesaoff.png';
-import portadaNuriva from '/assets/images/portada_nuriva.png';
+import portadaNuriva from '/assets/images/nuriva/manual.png';
 import portadaRevista from '/assets/images/portada_revista.png';
 const menuElement = document.getElementById('menu');
 const menuIcon = document.getElementById('menu-icon');

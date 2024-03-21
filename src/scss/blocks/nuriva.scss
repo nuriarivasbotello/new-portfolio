@@ -1,0 +1,43 @@
+.mosaic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .tile {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tile img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s;
+  }
+  
+  .tile:hover img {
+    filter: brightness(1.2);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay.active {
+    display: flex;
+  }
+  
+  .overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #fff;
+    cursor: zoom-out;
+  }

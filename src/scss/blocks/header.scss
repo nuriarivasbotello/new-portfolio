@@ -39,3 +39,7 @@
 .night{
   width: 35px;
 }
+.header.disabled, .menu.disabled {
+  pointer-events: none;
+  opacity:40%;
+}
