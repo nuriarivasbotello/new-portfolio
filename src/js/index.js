@@ -3,7 +3,8 @@
 import '../scss/styles.scss';
 import hamburguesaOn from '/assets/images/hamburguesaon.png';
 import hamburguesaOff from '/assets/images/hamburguesaoff.png';
-import portada from '/assets/images/portada_nuriva.png';
+import portadaNuriva from '/assets/images/portada_nuriva.png';
+import portadaRevista from '/assets/images/portada_revista.png';
 const menuElement = document.getElementById('menu');
 const menuIcon = document.getElementById('menu-icon');
 const mainElement = document.getElementById('main');
@@ -23,8 +24,8 @@ function handleClick() {
 }
 // Objeto con los nombres de los elementos y las URL de las imágenes asociadas
 var imagenes = {
-  elemento1: portada,
-  elemento2: './public/assets/images/portada_revista.png',
+  elemento1: portadaNuriva,
+  elemento2: portadaRevista,
   elemento3: 'imagen3.jpg',
   elemento4: 'imagen3.jpg',
   elemento5: 'imagen3.jpg',
@@ -55,4 +56,5 @@ elementosLista.forEach(function (elemento) {
   elemento.addEventListener('mouseenter', mostrarImagen);
   elemento.addEventListener('mouseleave', ocultarImagen);
 });
+
 menuIcon.addEventListener('click', handleClick);

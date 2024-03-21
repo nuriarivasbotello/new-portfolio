@@ -14,7 +14,7 @@ export default defineConfig({
         about: resolve(__dirname, 'src/html/about.html'),
         contact: resolve(__dirname, 'src/html/contact.html'),
         projects: resolve(__dirname, 'src/html/projects.html'),
-        nuriva: resolve(__dirname, 'src/html/nuriva.html')
+        travel: resolve(__dirname, 'src/html/travel.html')
         // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
       }
     },
