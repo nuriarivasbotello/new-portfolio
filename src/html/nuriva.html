@@ -60,109 +60,66 @@
         </ul>
       </nav>
     </header>
-    <main>
-        <div class="mosaic">
-            <div class="tile">
-              <img src="../assets/images/nuriva/manual.png" alt="Imagen 1" onclick="showImage('../assets/images/nuriva/manual.png')">
+    <main id="main" class="nuriva">
+        <div class="carousel">
+            <div class="carousel-container">
+              <div class="slide"><img src="../public/assets/images/nuriva/manual.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual2.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual3.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual4.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual5.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual6.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual7.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual8.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual9.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual10.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual11.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual12.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual13.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual14.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual15.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual16.png"/></div>
+              <div class="slide"><img src="../public/assets/images/nuriva/manual17.png"/></div>
+
             </div>
-            <div class="tile">
-              <img src="../assets/images/nuriva/manual2.png" alt="Imagen 2" onclick="showImage('../assets/images/nuriva/manual2.png')">
-            </div>
-            <div class="tile">
-              <img src="../assets/images/nuriva/manual3.png" alt="Imagen 3" onclick="showImage('../assets/images/nuriva/manual3.png')">
-            </div>
-            <div class="tile">
-                <img src="../assets/images/nuriva/manual4.png" alt="Imagen 4" onclick="showImage('../assets/images/nuriva/manual4.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual5.png" alt="Imagen 5" onclick="showImage('../assets/images/nuriva/manual5.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual6.png" alt="Imagen 6" onclick="showImage('../assets/images/nuriva/manual6.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual7.png" alt="Imagen 7" onclick="showImage('../assets/images/nuriva/manual7.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual8.png" alt="Imagen 8" onclick="showImage('../assets/images/nuriva/manual8.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual9.png" alt="Imagen 9" onclick="showImage('../assets/images/nuriva/manual9.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual10.png" alt="Imagen 10" onclick="showImage('../assets/images/nuriva/manual10.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual11.png" alt="Imagen 11" onclick="showImage('../assets/images/nuriva/manual11.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual12.png" alt="Imagen 12" onclick="showImage('../assets/images/nuriva/manual12.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual13.png" alt="Imagen 13" onclick="showImage('../assets/images/nuriva/manual13.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual14.png" alt="Imagen 14" onclick="showImage('../assets/images/nuriva/manual14.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual15.png" alt="Imagen 15" onclick="showImage('../assets/images/nuriva/manual15.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual16.png" alt="Imagen 16" onclick="showImage('../assets/images/nuriva/manual16.png')">
-              </div>
-              <div class="tile">
-                <img src="../assets/images/nuriva/manual17.png" alt="Imagen 17" onclick="showImage('../assets/images/nuriva/manual17.png')">
-              </div>
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
           </div>
-          
-          <div class="overlay" onclick="hideImage()">
-            <img id="expandedImg" src="" alt="Imagen Expandida">
-          </div>
+          <a href="https://www.behance.net/gallery/194443289/nuriva-Branding" target="_blank">
+            <button>Ver en Behance</button>
+          </a>
     </main>
    
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
     <script type="module" src="../js/index.js"></script>
     <script>
-        function showImage(src) {
-          // Deshabilitar la interacción con el header
-          const headerLinks = document.querySelectorAll('.header a');
-          headerLinks.forEach(link => {
-            link.style.pointerEvents = 'none';
-          });
-          
-          // Mostrar la imagen expandida
-          document.getElementById('expandedImg').src = src;
-          document.querySelector('.overlay').classList.add('active');
-        }
-      
-        function hideImage() {
-          // Habilitar nuevamente la interacción con el header
-          const headerLinks = document.querySelectorAll('.header a');
-          headerLinks.forEach(link => {
-            link.style.pointerEvents = 'auto';
-          });
-          
-          // Ocultar la imagen expandida
-          document.querySelector('.overlay').classList.remove('active');
-        }
-        function showImage(src) {
-  // Deshabilitar interacción con el encabezado y el menú
-  document.querySelector('.header').classList.add('disabled');
-  document.querySelector('.menu').classList.add('disabled');
-  
-  // Mostrar la imagen expandida
-  document.getElementById('expandedImg').src = src;
-  document.querySelector('.overlay').classList.add('active');
-}
+        document.addEventListener('DOMContentLoaded', function() {
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const container = document.querySelector('.carousel-container');
 
-function hideImage() {
-  // Habilitar interacción con el encabezado y el menú nuevamente
-  document.querySelector('.header').classList.remove('disabled');
-  document.querySelector('.menu').classList.remove('disabled');
-  
-  // Ocultar la imagen expandida
-  document.querySelector('.overlay').classList.remove('active');
-}
+  let currentIndex = 0;
+
+  nextBtn.addEventListener('click', function() {
+    currentIndex++;
+    if (currentIndex > container.children.length - 1) {
+      currentIndex = 0;
+    }
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', function() {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = container.children.length - 1;
+    }
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    container.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+});
       </script>
       
       

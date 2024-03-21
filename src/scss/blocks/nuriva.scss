@@ -6,57 +6,60 @@ body{
         overflow-y: visible;
     }
 }
-.mosaic {
-    display: grid;
-    grid-template-columns:50% 50%;
-    margin:auto;
-    padding-top:60px;
-    padding-left:20px;
-    gap:10px;
-    @include responsive(desktop) {
-        width: 1800px;
-        grid-template-columns:25% 25% 25% 25%;
-        justify-content: space-between;
-    }
-    
-  }
-  .tile {
-    width: 180px;
+.nuriva{
+  padding-top:80px;
+}
+.carousel {
+  max-width: 400px;
+  overflow: hidden;
+  margin:auto;
+  box-shadow: 0 0 40px rgb(142, 123, 166);
+  @include responsive(desktop) {
     position: relative;
-    overflow: hidden;
-    @include responsive(desktop) {
-        width: 300px;
-    }
+    max-width: 800px;
+    margin:auto;  }
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%; /* Asegura que cada slide ocupe el 100% del ancho del contenedor */
+}
+
+.slide img {
+  max-width: 400px; /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
+  max-height: 100%; /* Ajusta la altura máxima de la imagen al 100% del contenedor */
+  display: block; /* Asegura que la imagen se muestre como un bloque */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro de su contenedor */
+  @include responsive(desktop) {
+    max-width: 800px;
   }
-  
-  .tile img {
-    width: 100%;
-    height: auto;
-    transition: filter 0.3s;
+}
+
+.prev-btn,
+.next-btn {
+  width: 35px;
+  //height: 35px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  @include responsive(desktop) {
+    top: 50%;
+    width:0;
   }
-  
-  .tile:hover img {
-    filter: brightness(0.8);
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 1); /* Fondo oscuro semitransparente */
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .overlay.active {
-    display: flex;
-  }
-  
-  .overlay img {
-    max-width: 80%;
-    max-height: 80%;
-    cursor: zoom-out;
-  }
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
