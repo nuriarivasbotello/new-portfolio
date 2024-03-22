@@ -13,11 +13,9 @@
   color:var(--primary-color);
 
   @include responsive(desktop) {
-   display: flex;
-   flex-direction: column;
    justify-content: center;
    padding-left:260px;
-   padding-top:40px;
+   padding-top:20px;
 
   }
     &__title{
@@ -30,16 +28,17 @@
       font-size: 50px;
       background-repeat: no-repeat;
       background-position: 0;
+      position: relative;
+      bottom:10px;
+      margin-bottom:20px;
     }
     }
-    &__info{
-        @include responsive(desktop) {
-            display:grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 33% 33% 33%;
-    
-        }
-    }
+}
+.email{
+  @include responsive(desktop) {
+    margin-top:40px;
+    font-size: 20px;
+  }
 }
 .main--show{
     opacity: 0;
