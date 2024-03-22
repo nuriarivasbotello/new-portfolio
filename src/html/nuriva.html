@@ -61,66 +61,57 @@
       </nav>
     </header>
     <main id="main" class="nuriva">
-        <div class="carousel">
-            <div class="carousel-container">
-              <div class="slide"><img src="../public/assets/images/nuriva/manual.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual2.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual3.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual4.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual5.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual6.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual7.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual8.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual9.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual10.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual11.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual12.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual13.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual14.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual15.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual16.png"/></div>
-              <div class="slide"><img src="../public/assets/images/nuriva/manual17.png"/></div>
-
-            </div>
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
+      <h2 class="nuriva__title">nuriva</h2>
+      <section class="nuriva__info">
+        <a href="https://www.behance.net/gallery/194443289/nuriva-Branding" target="_blank">
+          <button class="button">¡Míralo en Behance!</button>
+        </a>
+        <p class="nuriva__paragraph">El nombre "nuriva" fue concebido específicamente para servir como marca de identidad en el ámbito del diseño gráfico. Con esta marca, pretendo continuar exhibiendo mis creaciones en redes sociales, centrándome exclusivamente en el diseño gráfico.</p>
+      </section>
+      <section class="nuriva__manual">
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual2.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual3.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual4.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual5.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual6.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual7.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual8.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual9.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual10.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual11.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual12.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual13.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual14.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual15.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual16.png"/>
+        <img class= "
+        nuriva__img" src="../public/assets/images/nuriva/manual17.png"/>
+      </section>
+        <button class="buttonTop" onclick="irAlInicio()" id="btnInicio" title="Ir al inicio">↑</button>
           </div>
-          <a href="https://www.behance.net/gallery/194443289/nuriva-Branding" target="_blank">
-            <button class="button">¡Míralo en Behance!</button>
-          </a>
     </main>
    
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
     <script type="module" src="../js/index.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  const container = document.querySelector('.carousel-container');
-
-  let currentIndex = 0;
-
-  nextBtn.addEventListener('click', function() {
-    currentIndex++;
-    if (currentIndex > container.children.length - 1) {
-      currentIndex = 0;
-    }
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener('click', function() {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = container.children.length - 1;
-    }
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    container.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-});
-document.querySelectorAll('.button').forEach(button => {
+      document.querySelectorAll('.button').forEach(button => {
 
 let div = document.createElement('div'),
     letters = button.textContent.trim().split('');
@@ -160,13 +151,24 @@ button.addEventListener('mouseleave', e => {
 });
 
 });
+    </script>
+    <script>
+      // Función para mostrar u ocultar el botón dependiendo del desplazamiento de la página
+      window.onscroll = function() {mostrarBotonInicio()};
+      
+      function mostrarBotonInicio() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("btnInicio").style.display = "block";
+          } else {
+              document.getElementById("btnInicio").style.display = "none";
+          }
+      }
+      
+      // Función para llevar al usuario al inicio de la página
+      function irAlInicio() {
+          document.body.scrollTop = 0; // Para navegadores Safari
+          document.documentElement.scrollTop = 0; // Para otros navegadores
+      }
       </script>
-      
-      
   </body>
 </html>
-
-
-
-
-
