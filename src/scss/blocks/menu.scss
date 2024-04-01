@@ -42,7 +42,6 @@
   
   @include responsive(desktop) {
     z-index: 999;
-    position: absolute;
     left:1600px;
   }
 }
