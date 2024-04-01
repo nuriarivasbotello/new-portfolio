@@ -16,7 +16,9 @@ export default defineConfig({
         projects: resolve(__dirname, 'src/html/projects.html'),
         nuriva: resolve(__dirname, 'src/html/nuriva.html'),
         magazine: resolve(__dirname, 'src/html/magazine.html'),
-        travel: resolve(__dirname, 'src/html/travel.html')
+        travel: resolve(__dirname, 'src/html/travel.html'),
+        photomontage: resolve(__dirname, 'src/html/photomontage.html'),
+        holyweek: resolve(__dirname, 'src/html/holyweek.html')
         // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
       }
     },
