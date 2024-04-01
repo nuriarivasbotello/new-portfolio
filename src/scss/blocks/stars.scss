@@ -1,34 +1,36 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .stars{
-    @include responsive(desktop) {}
+    @include responsive(desktop) {
+        display: flex;
+        align-items: center;
+    }
     &__first{
         position: relative;
-        bottom:280px;
-        left:170px;
+        bottom:370px;
+        left:120px;
         @include responsive(desktop) {
-            bottom:380px;
-            left:200px;
+            bottom:330px;
+            left:300px;
         }
     }
     &__second{
         position: relative;
-        bottom:240px;
-        right:200px;
+        bottom:190px;
+        right:140px;
         @include responsive(desktop) {
-            bottom:200px;
-            right:280px;
+            bottom:120px;
+            right:300px;
 
         }
     }
     &__third{
         position: relative;
-        bottom:160px;
-        left:220px;
+        bottom:240px;
+            left:170px;
         @include responsive(desktop) {
-            bottom:270px;
-            left:300px;
-
+            bottom:120px;
+            left:240px;
         }
     }
 }

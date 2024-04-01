@@ -5,6 +5,11 @@ import hamburguesaOn from '/assets/images/hamburguesaon.png';
 import hamburguesaOff from '/assets/images/hamburguesaoff.png';
 import portadaNuriva from '/assets/images/nuriva/manual.png';
 import portadaRevista from '/assets/images/portada_revista.png';
+import bingo from '/assets/images/bingo.png';
+import wordle from '/assets/images/wordle.png';
+import travel from '/assets/images/travel.jpg';
+import photomontage from '/assets/images/photomontages/darth.png';
+import holyWeek from '/assets/images/holyweek/holyweek.jpg';
 const menuElement = document.getElementById('menu');
 const menuIcon = document.getElementById('menu-icon');
 const mainElement = document.getElementById('main');
@@ -26,12 +31,11 @@ function handleClick() {
 var imagenes = {
   elemento1: portadaNuriva,
   elemento2: portadaRevista,
-  elemento3: 'imagen3.jpg',
-  elemento4: 'imagen3.jpg',
-  elemento5: 'imagen3.jpg',
-  elemento6: './public/assets/images/travel.jpg',
-  elemento7: 'imagen3.jpg',
-  elemento8: 'imagen3.jpg'
+  elemento3: wordle,
+  elemento4: bingo,
+  elemento5: travel,
+  elemento6: photomontage,
+  elemento7: holyWeek
 };
 
 // Función para mostrar la imagen asociada al elemento cuando se pasa el ratón sobre él
