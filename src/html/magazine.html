@@ -131,23 +131,49 @@ button.addEventListener('mouseleave', e => {
 
 });
     </script>
-    <script>
-      // Función para mostrar u ocultar el botón dependiendo del desplazamiento de la página
-      window.onscroll = function() {mostrarBotonInicio()};
-      
-      function mostrarBotonInicio() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.getElementById("btnInicio").style.display = "block";
-          } else {
-              document.getElementById("btnInicio").style.display = "none";
-          }
-      }
-      
-      // Función para llevar al usuario al inicio de la página
-      function irAlInicio() {
-          document.body.scrollTop = 0; // Para navegadores Safari
-          document.documentElement.scrollTop = 0; // Para otros navegadores
-      }
-      </script>
+<script>
+  // Función para mostrar u ocultar el botón dependiendo del desplazamiento de la página
+  window.onscroll = function() {
+    mostrarBotonInicio();
+  };
+
+  function mostrarBotonInicio() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("btnInicio").style.display = "block";
+    } else {
+      document.getElementById("btnInicio").style.display = "none";
+    }
+  }
+
+  // Función para llevar al usuario al inicio de la página con animación suave
+  function irAlInicio() {
+    var startPosition = window.pageYOffset;
+    var targetPosition = 0;
+    var distance = targetPosition - startPosition;
+    var duration = 1000; // Duración de la animación en milisegundos
+    var startTime;
+
+    // Función de animación
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    // Función para animar el desplazamiento
+    function animation(currentTime) {
+      if (startTime === undefined) startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      var run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Iniciar la animación
+    requestAnimationFrame(animation);
+  }
+</script>
+
   </body>
 </html>
