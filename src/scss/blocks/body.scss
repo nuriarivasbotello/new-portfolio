@@ -5,9 +5,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     color:var(--primary-color);
-    background-image: url('/assets/images/noise.png');
     @include responsive(desktop) {
         overflow-x: hidden;
-        overflow-y: hidden;
     }
 }

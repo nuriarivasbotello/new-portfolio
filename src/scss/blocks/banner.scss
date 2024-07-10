@@ -1,0 +1,46 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+.banner{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    background-image: url('/assets/images/banner.png');
+    background-size: 100%; /* Cubrir todo el área del contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    @include responsive(desktop) {
+        position: relative;
+        right:70px;
+    }
+    &__aboutme{
+        font-family: var(--font-text);
+        font-size: 25px;
+        line-height: 30px;
+        @include responsive(desktop) {
+            width: 620px;
+            position: relative;
+            bottom:40px;
+            font-size: 30px;
+            line-height: 50px;
+
+        }
+    }
+    &__links{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top:20px;
+        gap:30px;
+        font-family:var(--font-text);
+        font-size: 18px;
+        @include responsive(desktop) {
+            font-size: 20px;
+            top:-20px;
+            flex-direction:row;
+        }
+    }
+}

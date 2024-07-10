@@ -1,11 +1,12 @@
 :root {
   /* Variables CSS */
-  --primary-color:rgba(142, 123, 166, 1);
-  --secondary-color:#4682b4;
-  --tertiary-color:#CDCCCC;
-  --quaternary-color:#575555;
-  --font-title: 'Quicksand', sans-serif;
-  --font-text: 'Playfair Display', serif;
+  --primary-color:rgba(44, 44, 44, 1);
+  --secondary-color:rgba(213, 175, 246, 1)#4682b4;
+  --tertiary-color:rgba(112, 169, 161, 1);
+  --font-title: "Diamond Sparkling";
+  --font-text: "Roboto";
+  --size-title:14px;
+  --size-text:12px;
 }
 
 /* Variables SASS */

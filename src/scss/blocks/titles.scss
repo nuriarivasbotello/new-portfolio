@@ -1,16 +1,20 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/responsive.scss' as *;
 .title{
-  font-size: 35px;
+  display: flex;
+  flex-direction: row;
+  font-size:var(--size-title);
   font-family: var(--font-title);
-  position: relative;
-  top:20px;
-  background-image: url('/assets/images/linea.svg');
-  background-position: 178px;
-  background-repeat: no-repeat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
   @include responsive(desktop) {
-    font-size: 50px;
-    background-image: url('/assets/images/linea.svg');
-    background-position: 250px;
   }
+}
+.word01{
+  color: var(--primary-color);
+}
+.word02{
+  color: var(--secondary-color);
 }
