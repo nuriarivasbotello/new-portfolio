@@ -5,16 +5,17 @@
   flex-direction: row;
   font-size:var(--size-title);
   font-family: var(--font-title);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.28px;
+  letter-spacing: 1px;
+  gap:10px;
   @include responsive(desktop) {
+    font-size:30px;
+    gap:20px;
+    letter-spacing: 2px;
   }
 }
 .word01{
   color: var(--primary-color);
 }
-.word02{
+.name{
   color: var(--secondary-color);
 }

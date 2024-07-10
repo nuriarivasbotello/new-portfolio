@@ -1,15 +1,15 @@
 @use '../mixins/responsive.scss' as *;
 
 .header {
-  color: black;
-  height: 100px;
-  position: relative;
+  display: flex;
+  margin: 30px;
+  color: var(--primary-color);
   @include responsive(desktop) {
-    width: 1900px;
-    position: relative;
-    z-index: 10;
-  }
-  &__top {
+    padding-left:120px;
+    margin-top:60px;
+/*     z-index: 10; */
+  }}
+/*   &__top {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,14 +34,17 @@
   @include responsive(desktop) {
     font-size: 20px;
   }
-}
+} */
 .logo{
-  width: 60px;
+  width: 80px;
+  @include responsive(desktop) {
+    width: 120px;
+  }
 }
-.night{
+/* .night{
   width: 35px;
-}
-.header.disabled, .menu.disabled {
+} */
+/* .header.disabled, .menu.disabled {
   pointer-events: none;
   opacity:40%;
-}
+} */

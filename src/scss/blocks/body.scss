@@ -5,7 +5,15 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     color:var(--primary-color);
+    background:
+    url('/assets/images/Fondo Banner Izq.svg') left top 100%,
+    url('/assets/images/Fondo Banner Drch.svg')right top 140%;
+    background-repeat: no-repeat;
     @include responsive(desktop) {
-        overflow-x: hidden;
+    background:
+    url('/assets/images/Fondo Banner.svg')center top 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+        
     }
 }

@@ -1,46 +1,35 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .banner{
-    position: relative;
     display:flex;
     flex-direction: column;
     margin:auto;
     text-align: center;
     align-items: center;
-    background-image: url('/assets/images/banner.png');
-    background-size: 100%; /* Cubrir todo el área del contenedor */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
+    margin-top:30px;
     @include responsive(desktop) {
         position: relative;
-        right:70px;
+        right:180px;
+        top:140px;
     }
     &__aboutme{
         font-family: var(--font-text);
-        font-size: 25px;
-        line-height: 30px;
+        font-size: 16px;
+        padding: 0 20px;
         @include responsive(desktop) {
-            width: 620px;
-            position: relative;
-            bottom:40px;
+            width: 600px;
             font-size: 30px;
-            line-height: 50px;
-
+            padding:0;
+            margin:0;
         }
     }
     &__links{
         display: flex;
-        flex-direction: column;
-        position: relative;
-        top:20px;
+        flex-direction: row;
         gap:30px;
         font-family:var(--font-text);
         font-size: 18px;
         @include responsive(desktop) {
-            font-size: 20px;
-            top:-20px;
-            flex-direction:row;
         }
     }
 }
