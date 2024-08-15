@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CAMBIA EL TITLE!!! -->
-    <title>nuriva</title>
+    <title>Nuria Rivas</title>
   </head>
   <body>
     <header class="header">
@@ -15,7 +15,7 @@
           src="./assets/images/logo.svg"
           alt="logo"/></a>
           <nav id="menu">
-            <ul>
+            <ul class="menu">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Contacto</a></li>
@@ -30,11 +30,44 @@
        <p class="banner__aboutme">UX/UI Designer y Developer Front - End
          entre otras cosas</p>
        <article class="banner__links">
-         <a class="button" href="/new-portfolio/assets/pdsfs/portfolio.pdf" target="_blank">Mira mi CV</a>
-         <a class="button"  href="/new-portfolio/assets/pdsfs/portfolio.pdf" target="_blank">Mira mi portfolio</a>
+         <a id="buttonIndexFirst" class="btn" href="/new-portfolio/assets/pdfs/portfolio.pdf" target="_blank">Mira mi CV</a>
+         <a id="buttonIndexSecond" class="btn"  href="/new-portfolio/assets/pdfs/portfolio.pdf" target="_blank">Mira mi portfolio</a>
        </article>
     </div>
-    <main id="main" class="main">
+    <main class="main">
+      <p class="title_section">Proyectos</p>
+      <div class="item" data-image="image1.jpg">
+        <p>Texto principal 1</p>
+        <section>
+            <p>Texto secundario 1a</p>
+            <p>Texto secundario 1b</p>
+        </section>
+        <div class="hover-image"></div>
+    </div>
+    <div class="item" data-image="image2.jpg">
+        <p>Texto principal 2</p>
+        <section>
+            <p>Texto secundario 2a</p>
+            <p>Texto secundario 2b</p>
+        </section>
+        <div class="hover-image"></div>
+    </div>
+    <div class="item" data-image="image3.jpg">
+        <p>Texto principal 3</p>
+        <section>
+            <p>Texto secundario 3a</p>
+            <p>Texto secundario 3b</p>
+        </section>
+        <div class="hover-image"></div>
+    </div>
+    <div class="item" data-image="image4.jpg">
+        <p>Texto principal 4</p>
+        <section>
+            <p>Texto secundario 4a</p>
+            <p>Texto secundario 4b</p>
+        </section>
+        <div class="hover-image"></div>
+    </div>
     </main>
     <script type="module" src="./js/index.js"></script>
   </body>

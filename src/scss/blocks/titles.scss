@@ -17,5 +17,8 @@
   color: var(--primary-color);
 }
 .name{
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
+  @include responsive(desktop) {
+    color: var(--secondary-color);
+  }
 }

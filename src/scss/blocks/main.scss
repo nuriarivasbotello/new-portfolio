@@ -1,28 +1,44 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .main{
-    //margin:40px 30px;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
-    //transform: translateX(0);
-    //transition: transform 0.4s;
-    opacity: 1;
-    transition: opacity 0.3s linear;
-    color:var(--primary-color);
-  //background-color: blue;
-    @include responsive(desktop) {
-        margin:0;
-        padding-top:80px;
-        flex-direction: row;
-        gap:50px;
-        align-items: center;
-    }
+    gap: 20px;
+    padding-left:28px;
+    margin-top:40px;
+    @include responsive(desktop) {}
+}
+.title_section{
+    font-size:25px;
+    font-family: var(--font-title);
+}
+.item {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
 
-.main--show{
-    opacity: 0;
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hover-image {
+    @include responsive(desktop) {
+        display: none;
     position: absolute;
-    top: -9999px;
-    //transform: translateX(110%);
-  }
+    top: 0;
+    right: -100px; /* Ajusta según el tamaño de la imagen */
+    width: 100px; /* Ajusta según el tamaño de la imagen */
+    height: 100px; /* Ajusta según el tamaño de la imagen */
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    }
+}

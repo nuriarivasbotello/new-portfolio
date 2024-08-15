@@ -6,14 +6,14 @@ body {
     overflow-y: hidden;
     color:var(--primary-color);
     background:
-    url('/assets/images/Fondo Banner Izq.svg') left top 100%,
-    url('/assets/images/Fondo Banner Drch.svg')right top 140%;
+    url('/assets/images/FondoBanner.svg');
+    background-size: contain;
+    background-position: 20% 12%;
     background-repeat: no-repeat;
+    
+    min-height: 100vh;
     @include responsive(desktop) {
-    background:
-    url('/assets/images/Fondo Banner.svg')center top 10%;
-    background-size: cover;
-    background-repeat: no-repeat;
-        
+        background-position: 20% -30%;
+        background-repeat: no-repeat;
     }
 }

@@ -1,25 +1,42 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .banner{
+    position: relative;
     display:flex;
     flex-direction: column;
+    justify-content: center;
     margin:auto;
     text-align: center;
     align-items: center;
-    margin-top:30px;
+    margin-top:40px;
     @include responsive(desktop) {
+        height: 100%;
         position: relative;
         right:180px;
-        top:140px;
+        top:100px;
+        justify-content: left;
+        text-align: left;
+        align-items: left;
+        margin:0;
+        padding-top:20px;
+        padding-bottom:100px;
+        background-image: url('/assets/images/stars1.svg'), url('/assets/images/stars2.svg');
+        background-position: 25% 100%, 75% 0%;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 5% auto, 5% auto;
     }
     &__aboutme{
+        position: relative;
+        bottom:10px;
         font-family: var(--font-text);
         font-size: 16px;
         padding: 0 20px;
         @include responsive(desktop) {
+            position: relative;
+            right:43px;
+            bottom:20px;
             width: 600px;
             font-size: 30px;
-            padding:0;
             margin:0;
         }
     }
@@ -29,7 +46,12 @@
         gap:30px;
         font-family:var(--font-text);
         font-size: 18px;
+        margin-top:20px;
         @include responsive(desktop) {
+            position: relative;
+            right:138px;
+            padding-top:60px;
+
         }
     }
 }

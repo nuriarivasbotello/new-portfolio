@@ -2,6 +2,29 @@
 @use '../mixins/hover.scss' as *;
 
 .menu {
-  color:black;
-  padding: 10px 0;
+  color:var(--primary-color);
+  display: flex;
+  flex-direction:row;
+  gap:50px;
+  font-family: var(--font-title);
+  font-size:28px;
+  padding-right:120px;
+}
+
+.menu li {
+  
+  color: var(--primary-color); 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  color:var(--secondary-color);
+}
+
+
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+  }
 }
