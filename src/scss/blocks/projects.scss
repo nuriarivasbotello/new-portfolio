@@ -15,7 +15,7 @@
     }
 }
 .project-title{
-    font-family:Diamond;
+    font-family:var(--font-title);
     font-weight: 100;
     @include responsive(desktop) {
         font-size:30px;
