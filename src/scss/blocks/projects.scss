@@ -4,8 +4,10 @@
 .projects {
     color:var(--primary-color);
     padding: 40px;
+    position: relative;
 }
 .title-section{
+    font-weight: 100;
     font-size:30px;
     font-family:var(--font-title);
     @include responsive(desktop) {
@@ -14,6 +16,7 @@
 }
 .project-title{
     font-family:var(--font-title);
+    font-weight: 100;
     @include responsive(desktop) {
         font-size:30px;
     }
@@ -23,9 +26,11 @@
     position: relative;
     cursor: pointer;
     @include responsive(desktop) {
+        width: 400px;
     }
 }
 .project-details{
+    position: relative;
     display: flex;
     flex-direction: row;
     gap:20px;
@@ -40,12 +45,12 @@
 }
 /* Imagen de hover en una posición fija */
 .project-hover-image {
-    position: fixed;
-    top: 420px; /* Ajusta la posición vertical según tus necesidades */
-    right: 20px; /* Ajusta la posición horizontal según tus necesidades */
+    position: absolute;
+    top: 1280px; /* Ajusta la posición vertical según tus necesidades */
+    right: 330px; /* Ajusta la posición horizontal según tus necesidades */
     display: none; /* Oculta la imagen por defecto */
     z-index: 1000; /* Asegura que la imagen esté sobre otros elementos */
-    width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    width: auto; /* Ajusta el tamaño de la imagen según tus necesidades */
     height: auto; /* Mantiene la proporción de la imagen */
 }
 

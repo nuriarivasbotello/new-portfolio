@@ -2,13 +2,19 @@
 @use '../mixins/hover.scss' as *;
 .main{
     background:
-    url('/assets/images/Mancha3.svg'), url('/assets/images/stars1.svg');
+    url('/assets/images/Mancha2.svg'), url('/assets/images/stars1.svg'), url('/assets/images/Mancha3.svg');
     
-    background-size: 40% auto, 10% auto;
-    background-position: 20% 12%, 70% 10%;
+    background-size: 70% auto, 10% auto, 80% auto;
+    background-position: 20% 10%, 75% 10%, 180% 90%;
     background-repeat: no-repeat;
     @include responsive(desktop) {
-        margin-top:10px;
+        margin-top:270px;
         padding-left:260px;
+        background:
+    url('/assets/images/OvaloProyectos.svg'), url('/assets/images/Mancha1.svg'), url('/assets/images/Mancha2.svg'),url('/assets/images/Mancha3.svg');
+    
+    background-size:30% auto,40% auto,32% auto, 30% auto;
+    background-position: 80% 50%, 90% -20%, 20% 30%, 110% 110%;
+    background-repeat: no-repeat;
     }
 }

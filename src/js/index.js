@@ -55,13 +55,14 @@ document.querySelectorAll('.item').forEach(item => {
 // Llama a handleResize en la carga inicial y en cada cambio de tamaño
 window.addEventListener('load', handleResize);
 window.addEventListener('resize', handleResize);
+
 document.addEventListener('DOMContentLoaded', function () {
   const projectInfos = document.querySelectorAll('.project-info');
   const hoverImage = document.getElementById('hover-image');
 
   // Definir las rutas de las imágenes en una constante
   const imagePaths = {
-    image1: './images/image1.jpg',
+    image1: 'assets/images/project-nuriva.svg',
     image2: './images/image2.jpg',
     image3: './images/image3.jpg',
     image4: './images/image4.jpg',
