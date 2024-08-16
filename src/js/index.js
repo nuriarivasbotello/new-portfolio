@@ -51,6 +51,41 @@ document.querySelectorAll('.item').forEach(item => {
     hoverImage.style.display = 'none';
   });
 });
+
 // Llama a handleResize en la carga inicial y en cada cambio de tamaño
 window.addEventListener('load', handleResize);
 window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', function () {
+  const projectInfos = document.querySelectorAll('.project-info');
+  const hoverImage = document.getElementById('hover-image');
+
+  // Definir las rutas de las imágenes en una constante
+  const imagePaths = {
+    image1: './images/image1.jpg',
+    image2: './images/image2.jpg',
+    image3: './images/image3.jpg',
+    image4: './images/image4.jpg',
+    image5: './images/image5.jpg',
+    image6: './images/image6.jpg'
+  };
+
+  function handleMouseEnter(event) {
+    const projectInfo = event.currentTarget;
+    const imageKey = projectInfo.dataset.image;
+    const imageUrl = imagePaths[imageKey];
+
+    // Actualizar y mostrar la imagen de hover
+    hoverImage.src = imageUrl;
+    hoverImage.style.display = 'block';
+  }
+
+  function handleMouseLeave() {
+    // Ocultar la imagen de hover
+    hoverImage.style.display = 'none';
+  }
+
+  projectInfos.forEach(info => {
+    info.addEventListener('mouseenter', handleMouseEnter);
+    info.addEventListener('mouseleave', handleMouseLeave);
+  });
+});
