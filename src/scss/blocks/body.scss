@@ -1,6 +1,13 @@
 @use '../mixins/responsive.scss' as *;
 html {
 }
+@font-face {
+    font-family: 'Diamond';
+    src: url('/assets/fonts/Diamond Sparkling.woff2') format('woff2'),
+         url('/assets/fonts/Diamond Sparkling.woff') format('woff');
+    font-weight: normal; /* Opcional */
+    font-style: normal; /* Opcional */
+}
 body {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -20,3 +27,4 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     }
 }
+
