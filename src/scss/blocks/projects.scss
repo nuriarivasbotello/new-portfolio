@@ -1,6 +1,12 @@
 /* Estilos opcionales */
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
+@font-face {
+	font-family: Diamond Sparkling;
+	src: url('./assets/fonts/Diamond Sparkling.ttf');
+	font-weight: 300;
+	font-display: swap;
+}
 .projects {
     color:var(--primary-color);
     padding: 40px;
@@ -9,7 +15,7 @@
 .title-section{
     font-weight: 100;
     font-size:30px;
-    font-family:var(--font-title);
+    font-family:Diamond Sparkling;
     @include responsive(desktop) {
         font-size:50px;
     }

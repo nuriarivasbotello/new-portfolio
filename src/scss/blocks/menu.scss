@@ -1,12 +1,17 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
-
+@font-face {
+	font-family: Diamond Sparkling;
+	src: url('./assets/fonts/Diamond Sparkling.ttf');
+	font-weight: 300;
+	font-display: swap;
+}
 .menu {
   color:var(--primary-color);
   display: flex;
   flex-direction:row;
   gap:50px;
-  font-family: var(--font-title);
+  font-family:Diamond Sparkling;
   font-size:28px;
   padding-right:120px;
 }
