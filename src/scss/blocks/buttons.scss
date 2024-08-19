@@ -1,7 +1,7 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .btn {
-    font-family: 'FontTitle';
+    font-family:'Eagle Lake', cursive;
     font-size:12px;
     background-color: white; 
             color: var(--primary-color); 
@@ -20,14 +20,14 @@
               }
 }
 
-/* Clase para el efecto hover */
+
 .hovered {
-    transform: translateY(-4px); /* Eleva el botón 4px hacia arriba */
-    box-shadow: 0 2px 0px var(--primary-color); /* Aumenta la sombra hacia arriba y hacia abajo */
+    transform: translateY(-4px);
+    box-shadow: 0 2px 0px var(--primary-color); 
 }
 
-/* Clase para el efecto active (pulsado) */
+
 .active {
-    transform: translateY(2px); /* Desplaza el botón 2px hacia abajo */
-    box-shadow: 0 2px 0px var(--primary-color); /* Sombra más suave al presionar */
+    transform: translateY(2px);
+    box-shadow: 0 2px 0px var(--primary-color);
 }

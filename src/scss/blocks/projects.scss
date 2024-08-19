@@ -8,13 +8,13 @@
 }
 .title-section{
     font-size:30px;
-    font-family: 'FontTitle';
+    font-family:'Eagle Lake', cursive;
     @include responsive(desktop) {
         font-size:50px;
     }
 }
 .project-title{
-    font-family: 'FontTitle';
+    font-family:'Eagle Lake', cursive;
     font-size:10px;
     @include responsive(desktop) {
         font-size:30px;

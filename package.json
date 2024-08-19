@@ -21,6 +21,9 @@
     "vite-plugin-minify": "^1.5.2"
   },
   "dependencies": {
-    "@fontsource-variable/merienda": "^5.0.14"
+    "@fontsource-variable/merienda": "^5.0.14",
+    "@fontsource/delius": "^5.0.20",
+    "@fontsource/eagle-lake": "^5.0.21",
+    "typeface-roboto": "^1.1.13"
   }
 }
