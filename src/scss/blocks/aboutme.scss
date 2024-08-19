@@ -53,9 +53,9 @@
 .overlay-images {
   position: absolute; /* Fija el overlay en relación a la ventana */
             top: 140px;
-            right: 70px;
+            right:60px;
             width: 310px;
-            //height: 300px;
+            height: auto;
             display: grid;
             grid-template-columns: 33% 33% 33%;
             grid-template-rows: 33% 33% 33%;
@@ -65,6 +65,7 @@
             transform: translateX(100%); /* Inicialmente fuera de la pantalla */
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones suaves */
             @include responsive(desktop) {
+              height: auto;
               right: 800px;
               top:100px;
               width: 600px;
