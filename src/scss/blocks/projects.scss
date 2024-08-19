@@ -14,14 +14,14 @@
 .title-section{
     
     font-size:30px;
-    font-family:'Eagle Lake', cursive;
+    font-family:DiamondSparkling;
     @include responsive(desktop) {
         font-size:50px;
         overflow-x: visible;
     }
 }
 .project-title{
-    font-family:'Eagle Lake', cursive;
+    font-family:DiamondSparkling;
     font-size:18px;
     //overflow-x: hidden;
     @include responsive(desktop) {
