@@ -7,7 +7,7 @@
     url('/assets/images/Mancha2.svg'), url('/assets/images/stars1.svg'), url('/assets/images/Mancha3.svg');
     
     background-size: 70% auto, 10% auto, 80% auto;
-    background-position: 20% 10%, 75% 10%, 180% 60%;
+    background-position: 20% 10%, 75% 10%, 180% 40%;
     background-repeat: no-repeat;
     @include responsive(desktop) {
         overflow-y:hidden;
@@ -17,7 +17,7 @@
     url('/assets/images/OvaloProyectos.svg'), url('/assets/images/Mancha1.svg'), url('/assets/images/Mancha2.svg'),url('/assets/images/Mancha3.svg');
     
     background-size:30% auto,40% auto,32% auto, 30% auto;
-    background-position: 80% 20%, 80% -10%, 20% 30%, 110% 100%;
+    background-position: 80% 20%, 80% -5%, 20% 30%, 110% 60%;
     background-repeat: no-repeat;
     }
 }

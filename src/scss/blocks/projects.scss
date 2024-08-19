@@ -3,9 +3,13 @@
 @use '../mixins/hover.scss' as *;
 .projects {
     color:var(--primary-color);
+    margin-top:50px;
     padding-left: 40px;
     position: relative;
     overflow-y: hidden;
+    @include responsive(desktop) {
+        
+    }
 }
 .title-section{
     overflow-x: hidden;
@@ -13,6 +17,7 @@
     font-family:'Eagle Lake', cursive;
     @include responsive(desktop) {
         font-size:50px;
+        overflow-x: visible;
     }
 }
 .project-title{
@@ -21,6 +26,7 @@
     overflow-x: hidden;
     @include responsive(desktop) {
         font-size:30px;
+        overflow-x: visible;
     }
 }
 .project-info {
@@ -31,6 +37,7 @@
     cursor: pointer;
     @include responsive(desktop) {
         width: 400px;
+        overflow-y: visible;
     }
 }
 .project-details{
