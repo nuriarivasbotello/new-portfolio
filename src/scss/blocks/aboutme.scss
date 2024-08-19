@@ -2,29 +2,30 @@
 @use '../mixins/hover.scss' as *;
 .about-me {
   position: relative;
-  padding: 20px;
-  padding:20px;
+  padding-left:40px;
 }
 
 .about-me p {
-  margin: 20px 0 0;
   font-size: 16px;
   line-height: 1.5;
   position: relative;
+  top:30px;
+  font-family:'FontText';
 }
 
 .highlight {
-  color: red;
+  color: var(--tertiary-color);
   font-weight: bold;
 }
 
 .main-image {
   position: absolute;
-  top: 20px;
+  bottom: 290px; /* Ajusta la posición según sea necesario */
   right: 20px;
-  width: 150px;
+  width: 130px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  z-index: 1000; /* Asegura que esté encima del overlay */
 }
 
 .main-image:hover {
@@ -42,26 +43,36 @@
 }
 
 .overlay-images {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 300px;
-  height: 300px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 5px;
-  z-index: 9999;
-  background: transparent;
-  overflow: hidden;
-  animation: slide-in 0.3s ease-in-out; /* Animación de entrada más rápida */
+  position: absolute; /* Fija el overlay en relación a la ventana */
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+            z-index: 9999;
+            opacity: 0; /* Inicialmente oculto */
+            transform: translateX(100%); /* Inicialmente fuera de la pantalla */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones suaves */
+}
+.overlay-images.show {
+  opacity: 1; /* Hacer visible */
+            transform: translateX(0); /* Mover a la posición original */
+            animation: bounce-in 0.6s ease-in-out; /* Animación de rebote al entrar */
+}
+
+.overlay-images.hide {
+  opacity: 0; /* Hacer invisible */
+            transform: translateX(100%); /* Mover fuera de la pantalla */
+            animation: none; /* Eliminar la animación de rebote al salir */
 }
 
 .overlay-images img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: bounce-in 0.3s ease-in-out;
 }
 
 @keyframes slide-in {
@@ -102,5 +113,5 @@
 }
 
 .overlay-images.hide {
-  animation: slide-out 0.3s ease-in-out; /* Animación de salida más rápida */
+  animation: slide-out 0.3s ease-in-out; /* Animación de salida */
 }

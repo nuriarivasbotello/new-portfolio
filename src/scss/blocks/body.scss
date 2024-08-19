@@ -1,6 +1,18 @@
 @use '../mixins/responsive.scss' as *;
 html {
 }
+@font-face {
+	font-family:'FontTitle';
+	src: url('assets/fonts/DiamondSparkling.ttf');
+    font-display: swap;
+}
+
+@font-face {
+	font-family:'FontText';
+	src: url('assets/fonts/Roboto-Regular.ttf');
+    font-display: swap;
+}
+
 body {
     
     color:var(--primary-color);
@@ -10,7 +22,7 @@ body {
     background-position: 20% 12%;
     background-repeat: no-repeat;
     height: 100vh; 
-    
+    overflow-x: hidden;
     min-height: 100vh;
     @include responsive(desktop) {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo sin distorsionarse */
@@ -18,11 +30,5 @@ body {
     background-position:20% 60%;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     }
-}
-@font-face {
-	font-family: Diamond Sparkling;
-	src: url('/src/public/assets/fonts/DiamondSparkling.ttf');
-	font-weight: 300;
-	font-display: swap;
 }
 

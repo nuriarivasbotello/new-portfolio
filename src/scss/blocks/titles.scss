@@ -4,26 +4,12 @@
   display: flex;
   flex-direction: row;
   font-size:14px;
-  @font-face {
-    font-family: Diamond Sparkling;
-    src: url('/src/public/assets/fonts/DiamondSparkling.ttf');
-    font-size:14px;
-    font-weight: normal;
-    font-style: normal;
-}
-  letter-spacing: 1px;
+  font-family:'FontTitle';
+  
   gap:10px;
-
-  @font-face {
-    font-family: Diamond Sparkling;
-    src: url('/src/public/assets/fonts/DiamondSparkling.ttf');
-    font-weight: 100;
-    font-size:14px;
-}
   @include responsive(desktop) {
     font-size:30px;
     gap:20px;
-    letter-spacing: 2px;
   }
 }
 .word01{
