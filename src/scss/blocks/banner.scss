@@ -27,7 +27,7 @@
     &__aboutme{
         position: relative;
         bottom:8px;
-        font-family: Roboto;
+        font-family: 'Roboto', sans-serif;
         font-size: 16px;
         padding: 0 20px;
         @include responsive(desktop) {

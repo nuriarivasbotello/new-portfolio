@@ -7,7 +7,6 @@
   font-family:DiamondSparkling;
   gap:10px;
   @include responsive(desktop) {
-    padding-left:140px;
     font-size:30px;
     gap:20px;
   }
