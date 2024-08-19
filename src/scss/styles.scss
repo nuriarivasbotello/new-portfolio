@@ -14,5 +14,10 @@
 @use 'blocks/texts.scss';
 @use 'blocks/projects.scss';
 @use 'blocks/buttons.scss';
-
+@font-face {
+	font-family:FontTitle;
+	src: url('/src/public/assets/fonts/DiamondSparkling.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
