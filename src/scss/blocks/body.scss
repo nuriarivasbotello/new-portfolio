@@ -10,7 +10,7 @@
 html {
 }
 body {
-    max-width: 100%;
+    
     color:var(--primary-color);
     background-image: url('/assets/images/FondoBannerIzq.svg'), url('/assets/images/FondoBannerDrch.svg');
         background-position: left 15%, right 25%;
@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
     
     @include responsive(desktop) {
+        background-image: url('/assets/images/FondoBanner.svg');
     background-size: cover; /* Asegura que la imagen cubra todo el fondo sin distorsionarse */
     //background-position: center center; /* Centra la imagen en la página */
     background-position:20% 60%;

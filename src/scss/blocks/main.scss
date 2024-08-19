@@ -9,6 +9,7 @@
     background-position: 20% 10%, 75% 10%, 180% 60%;
     background-repeat: no-repeat;
     @include responsive(desktop) {
+        overflow-y:hidden;
         margin-top:270px;
         padding-left:260px;
         background:

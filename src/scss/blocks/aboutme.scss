@@ -11,6 +11,10 @@
   position: relative;
   top:30px;
   font-family: 'Roboto', sans-serif;
+  @include responsive(desktop) {
+    width: 1100px;
+    font-size: 28px;
+  }
 }
 
 .highlight {
@@ -26,6 +30,10 @@
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   z-index: 1000; /* Asegura que esté encima del overlay */
+  @include responsive(desktop) {
+    width: 230px;
+    bottom: 10px;
+  }
 }
 
 .main-image:hover {
@@ -47,7 +55,7 @@
             top: 140px;
             right: 70px;
             width: 310px;
-            height: 300px;
+            //height: 300px;
             display: grid;
             grid-template-columns: 33% 33% 33%;
             grid-template-rows: 33% 33% 33%;
@@ -56,6 +64,12 @@
             opacity: 0; /* Inicialmente oculto */
             transform: translateX(100%); /* Inicialmente fuera de la pantalla */
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones suaves */
+            @include responsive(desktop) {
+              right: 800px;
+              top:100px;
+              width: 600px;
+              gap:80px;
+            }
 }
 .overlay-images.show {
   opacity: 1; /* Hacer visible */
