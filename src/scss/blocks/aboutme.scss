@@ -7,10 +7,11 @@
 }
 
 .about-me p {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
   position: relative;
   top:30px;
+  padding-right:20px;
   font-family: 'Roboto', sans-serif;
   @include responsive(desktop) {
     width: 1100px;
@@ -25,7 +26,7 @@
 
 .main-image {
   position: absolute;
-  bottom: 340px; /* Ajusta la posición según sea necesario */
+  bottom: 280px; /* Ajusta la posición según sea necesario */
   right: 20px;
   width: 130px;
   transition: transform 0.3s ease-in-out;
@@ -52,14 +53,12 @@
 }
 
 .overlay-images {
+  width: 300px;;
+  top:10px;
   position: absolute; /* Fija el overlay en relación a la ventana */
-            top: 140px;
-            right: 70px;
-            width: 300px;
             display: grid;
-            grid-template-columns: 33% 33% 33%;
-            grid-template-rows: 50% 50%;
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+            grid-template-rows: repeat(4, 1fr);    /* 4 filas iguales */
             z-index: 9999;
             opacity: 0; /* Inicialmente oculto */
             transform: translateX(100%); /* Inicialmente fuera de la pantalla */
@@ -67,10 +66,33 @@
             @include responsive(desktop) {
               height: auto;;
               right: 800px;
-              top:100px;
-              width: 600px;
-              gap:80px;
+              top:10px;
+              width: 550px;
             }
+}
+.overlay-images-1{
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+.overlay-images-2{
+  grid-row: 1/1;
+  grid-column: 2/2;
+}
+.overlay-images-3{
+  grid-row: 2/2;
+  grid-column: 3/3;
+}
+.overlay-images-4{
+  grid-row: 4/4;
+  grid-column: 1/1;
+}
+.overlay-images-5{
+  grid-row: 3/3;
+  grid-column: 2/2;
+}
+.overlay-images-6{
+  grid-row: 4/4;
+  grid-column: 3/3;
 }
 .overlay-images.show {
   opacity: 1; /* Hacer visible */
