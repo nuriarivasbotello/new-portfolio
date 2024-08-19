@@ -2,7 +2,7 @@
 @use '../mixins/responsive.scss' as *;
 @font-face {
 	font-family:FontTitle;
-	src: url('/src/public/assets/fonts/DiamondSparkling.ttf') format('truetype');
+	src: url('@/assets/fonts/DiamondSparkling.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
