@@ -15,9 +15,12 @@
 @use 'blocks/projects.scss';
 @use 'blocks/buttons.scss';
 @font-face {
-	font-family:FontTitle;
-	src: url('@/assets/fonts/DiamondSparkling.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+    font-family:'FontTitle';
+    src: url('/src/public/assets/fonts/DiamondSparkling.woff2') format('woff2'),
+         url('/src/public/assets/fonts/DiamondSparkling.woff') format('woff'),
+         url('/src/public/assets/fonts/DiamondSparkling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 
