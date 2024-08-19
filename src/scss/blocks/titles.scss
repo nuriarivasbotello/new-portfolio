@@ -2,8 +2,9 @@
 @use '../mixins/responsive.scss' as *;
 @font-face {
 	font-family:'FontTitle';
-	src: url('assets/fonts/DiamondSparkling.ttf');
-    font-display: swap;
+	src: url('assets/fonts/DiamondSparkling.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 .title{
   display: flex;
