@@ -23,7 +23,7 @@
 .project-title{
     font-family:'Eagle Lake', cursive;
     font-size:18px;
-    overflow-x: hidden;
+    //overflow-x: hidden;
     @include responsive(desktop) {
         font-size:30px;
         overflow-x: visible;
