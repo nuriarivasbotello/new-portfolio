@@ -1,7 +1,7 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .btn {
-    font-family:DiamondSparkling;
+    font-family:var(--font-title);
     font-size:15px;
     background-color: white; 
             color: var(--primary-color); 

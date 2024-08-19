@@ -1,12 +1,5 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/responsive.scss' as *;
-@font-face {
-  font-family: DiamondSparkling;
-  src: url('/assets/fonts/DiamondSparkling.ttf');
-  font-weight: 300;
-  font-display: swap;
-}
-
 .title{
   display: flex;
   flex-direction: row;
