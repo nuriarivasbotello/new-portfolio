@@ -3,11 +3,12 @@
 @use '../mixins/hover.scss' as *;
 .projects {
     color:var(--primary-color);
-    padding: 40px;
+    padding-left: 40px;
     position: relative;
     overflow-y: hidden;
 }
 .title-section{
+    overflow-x: hidden;
     font-size:30px;
     font-family:'Eagle Lake', cursive;
     @include responsive(desktop) {
@@ -17,6 +18,7 @@
 .project-title{
     font-family:'Eagle Lake', cursive;
     font-size:18px;
+    overflow-x: hidden;
     @include responsive(desktop) {
         font-size:30px;
     }
@@ -25,6 +27,7 @@
     font-family: 'Roboto', sans-serif;;
     margin-bottom: 20px;
     position: relative;
+    overflow-x: hidden;
     cursor: pointer;
     @include responsive(desktop) {
         width: 400px;
@@ -34,6 +37,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
     gap:20px;
     flex: 1; /* Ocupa todo el espacio disponible */
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
@@ -46,6 +50,7 @@
 }
 /* Imagen de hover en una posición fija */
 .project-hover-image {
+    overflow-x: hidden;
     position: absolute;
     top: 1280px; /* Ajusta la posición vertical según tus necesidades */
     right: 330px; /* Ajusta la posición horizontal según tus necesidades */
@@ -57,6 +62,7 @@
 
 /* Solo mostrar la imagen de hover en pantallas de escritorio */
 @media (min-width: 768px) {
+    
     .project-info:hover .project-hover-image {
         display: block;
     }
