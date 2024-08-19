@@ -15,13 +15,13 @@
 }
 .project-title{
     font-family:'Eagle Lake', cursive;
-    font-size:10px;
+    font-size:18px;
     @include responsive(desktop) {
         font-size:30px;
     }
 }
 .project-info {
-    font-family:'FontText';
+    font-family: 'Roboto', sans-serif;;
     margin-bottom: 20px;
     position: relative;
     cursor: pointer;
@@ -36,8 +36,8 @@
     gap:20px;
     flex: 1; /* Ocupa todo el espacio disponible */
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size:15px;
-    font-family:'FontText';
+    font-size:14px;
+    font-family: 'Roboto', sans-serif;
     @include responsive(desktop) {
         gap:30px;
         font-size:18px;

@@ -10,16 +10,16 @@
 html {
 }
 body {
-    
+    max-width: 100%;
     color:var(--primary-color);
-    background:
-    url('/assets/images/FondoBanner.svg');
-    background-size: contain;
-    background-position: 20% 12%;
-    background-repeat: no-repeat;
+    background-image: url('/assets/images/FondoBannerIzq.svg'), url('/assets/images/FondoBannerDrch.svg');
+        background-position: left 15%, right 25%;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 40% auto, 40% auto;
     height: 100vh; 
     overflow-x: hidden;
     min-height: 100vh;
+    
     @include responsive(desktop) {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo sin distorsionarse */
     //background-position: center center; /* Centra la imagen en la página */

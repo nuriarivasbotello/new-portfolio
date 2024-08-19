@@ -11,10 +11,11 @@
 .title{
   display: flex;
   flex-direction: row;
-  font-size:14px;
+  font-size:15px;
   font-family: 'Eagle Lake', cursive;
   gap:10px;
   @include responsive(desktop) {
+    padding-left:140px;
     font-size:30px;
     gap:20px;
   }
@@ -23,7 +24,7 @@
   color: var(--primary-color);
 }
 .name{
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   @include responsive(desktop) {
     color: var(--secondary-color);
   }

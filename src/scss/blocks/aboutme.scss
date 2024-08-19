@@ -6,11 +6,11 @@
 }
 
 .about-me p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   position: relative;
   top:30px;
-  font-family:'FontText';
+  font-family: 'Roboto', sans-serif;
 }
 
 .highlight {
@@ -20,7 +20,7 @@
 
 .main-image {
   position: absolute;
-  bottom: 290px; /* Ajusta la posición según sea necesario */
+  bottom: 340px; /* Ajusta la posición según sea necesario */
   right: 20px;
   width: 130px;
   transition: transform 0.3s ease-in-out;
@@ -44,14 +44,14 @@
 
 .overlay-images {
   position: absolute; /* Fija el overlay en relación a la ventana */
-            top: 20px;
-            right: 20px;
-            width: 300px;
+            top: 140px;
+            right: 70px;
+            width: 310px;
             height: 300px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 5px;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
+            gap: 20px;
             z-index: 9999;
             opacity: 0; /* Inicialmente oculto */
             transform: translateX(100%); /* Inicialmente fuera de la pantalla */

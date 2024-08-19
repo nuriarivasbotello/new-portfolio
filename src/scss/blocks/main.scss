@@ -1,11 +1,12 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
 .main{
+    overflow-x: hidden;
     background:
     url('/assets/images/Mancha2.svg'), url('/assets/images/stars1.svg'), url('/assets/images/Mancha3.svg');
     
     background-size: 70% auto, 10% auto, 80% auto;
-    background-position: 20% 10%, 75% 10%, 180% 90%;
+    background-position: 20% 10%, 75% 10%, 180% 60%;
     background-repeat: no-repeat;
     @include responsive(desktop) {
         margin-top:270px;
