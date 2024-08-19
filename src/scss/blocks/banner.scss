@@ -44,14 +44,22 @@
         display: flex;
         flex-direction: row;
         gap:30px;
-        font-family:var(--font-text);
-        font-size: 18px;
+        @font-face {
+            font-family: Diamond Sparkling;
+            src: url('/src/public/assets/fonts/DiamondSparkling.ttf');
+            font-size:18px;
+        }
         margin-top:20px;
         @include responsive(desktop) {
             position: relative;
             right:120px;
             padding-top:60px;
             gap:80px;
+            @font-face {
+                font-family: Diamond Sparkling;
+                src: url('/src/public/assets/fonts/DiamondSparkling.ttf');
+                font-size:28px;
+            }
 
         }
     }

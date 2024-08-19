@@ -2,7 +2,8 @@
 
 import '../scss/styles.scss';
 const buttons = document.querySelectorAll('.btn');
-
+const mainImage = document.getElementById('main-image');
+const overlayImages = document.getElementById('overlay-images');
 // Iteramos sobre cada botón para añadir los event listeners
 buttons.forEach(button => {
   // Añade la clase 'hovered' al pasar el ratón por encima
@@ -89,4 +90,29 @@ document.addEventListener('DOMContentLoaded', function () {
     info.addEventListener('mouseenter', handleMouseEnter);
     info.addEventListener('mouseleave', handleMouseLeave);
   });
+});
+mainImage.addEventListener('click', function () {
+  if (overlayImages.classList.contains('hide')) {
+    overlayImages.classList.remove('hide');
+    overlayImages.style.display = 'grid';
+  } else {
+    overlayImages.classList.add('hide');
+    setTimeout(() => {
+      overlayImages.style.display = 'none';
+    }, 300); // Tiempo de la animación de salida
+  }
+});
+
+document.addEventListener('click', function (event) {
+  if (
+    !mainImage.contains(event.target) &&
+    !overlayImages.contains(event.target)
+  ) {
+    if (!overlayImages.classList.contains('hide')) {
+      overlayImages.classList.add('hide');
+      setTimeout(() => {
+        overlayImages.style.display = 'none';
+      }, 300); // Tiempo de la animación de salida
+    }
+  }
 });

@@ -18,8 +18,12 @@
     }
 }
 .project-title{
-    font-family:var(--font-title);
-    font-weight: 100;
+    @font-face {
+        font-family: Diamond Sparkling;
+        src: url('/src/public/assets/fonts/DiamondSparkling.ttf');
+        font-weight: 100;
+        font-size:10px;
+    }
     @include responsive(desktop) {
         font-size:30px;
     }
