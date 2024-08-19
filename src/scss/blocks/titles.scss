@@ -1,7 +1,7 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/responsive.scss' as *;
 @font-face {
-	font-family:'FontTitle';
+	font-family:FontTitle;
 	src: url('assets/fonts/DiamondSparkling.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -10,8 +10,7 @@
   display: flex;
   flex-direction: row;
   font-size:14px;
-  font-family:'FontTitle';
-  
+  font-family:FontTitle;
   gap:10px;
   @include responsive(desktop) {
     font-size:30px;
