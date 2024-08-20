@@ -4,6 +4,12 @@
   position: relative;
   padding-left:40px;
   margin-top:60px;
+  @include responsive(desktop) {
+    background-image: url('/assets/images/stars2.svg');
+    background-size:5% auto;
+    background-position:90% 20%;
+    background-repeat: no-repeat;
+    }
 }
 
 .about-me p {
@@ -15,7 +21,7 @@
   font-family: 'Roboto', sans-serif;
   @include responsive(desktop) {
     width: 1100px;
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
@@ -34,7 +40,8 @@
   z-index: 1000; /* Asegura que esté encima del overlay */
   @include responsive(desktop) {
     width: 230px;
-    bottom: 10px;
+    right: 100px;
+    top: 420px;
   }
 }
 

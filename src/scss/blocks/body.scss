@@ -13,11 +13,10 @@ body {
     min-height: 100vh;
     
     @include responsive(desktop) {
-        background-image: url('/assets/images/FondoBanner.svg');
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo sin distorsionarse */
-    //background-position: center center; /* Centra la imagen en la página */
-    background-position:20% 60%;
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('/assets/images/FondoBanner.svg'),url('/assets/images/Mancha5.svg');
+    background-size: cover, 20% auto;
+    background-position:20% 60%,2% 474%;
+    background-repeat: no-repeat;
     }
 }
 

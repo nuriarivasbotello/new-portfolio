@@ -1,1 +1,34 @@
-/* ESTILOS DEL FOOTER */
+@use '../mixins/responsive.scss' as *;
+.footer{
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+    padding-bottom:40px;
+    @include responsive(desktop) {
+        margin-top:150px;
+    padding-bottom:40px;
+        font-size:16px;
+    }
+}
+#scroll-to-top {
+    position: fixed;
+    right: 50px; /* Espacio desde el borde derecho */
+    bottom: 50px; /* Espacio desde el borde inferior */
+    display: none; /* Oculto por defecto */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  #scroll-icon {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+  }
+  @media (min-width: 1024px) {
+    #scroll-to-top {
+      display: none;
+    }
+  }

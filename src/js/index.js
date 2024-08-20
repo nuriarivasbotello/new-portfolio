@@ -113,3 +113,63 @@ document.addEventListener('click', function (event) {
     }
   }
 });
+function updateSocialIcons() {
+  const screenWidth = window.innerWidth;
+
+  const gmailIcon = document.getElementById('icon-gmail');
+  const linkedinIcon = document.getElementById('icon-linkedin');
+  const githubIcon = document.getElementById('icon-github');
+  const behanceIcon = document.getElementById('icon-behance');
+  const instagramIcon = document.getElementById('icon-instagram');
+
+  if (screenWidth < 768) {
+    // Cambiar a iconos para móvil
+    gmailIcon.src = '../assets/images/IconGmailMvl.svg';
+    linkedinIcon.src = '../assets/images/IconLkMvl.svg';
+    githubIcon.src = '../assets/images/IconGitMvl.svg';
+    behanceIcon.src = '../assets/images/IconBhMvl.svg';
+    instagramIcon.src = '../assets/images/IconInstMvl.svg';
+  } else if (screenWidth < 1024) {
+    // Cambiar a iconos para tablet
+    gmailIcon.src = '../assets/images/IconGmailMvl.svg';
+    linkedinIcon.src = '../assets/images/IconLkMvl.svg';
+    githubIcon.src = '../assets/images/IconGitMvl.svg';
+    behanceIcon.src = '../assets/images/IconBhMvl.svg';
+    instagramIcon.src = '../assets/images/IconInstMvl.svg';
+  } else {
+    // Cambiar a iconos para desktop
+    gmailIcon.src = '../assets/images/IconGmail.svg';
+    linkedinIcon.src = '../assets/images/IconLk.svg';
+    githubIcon.src = '../assets/images/IconGit.svg';
+    behanceIcon.src = '../assets/images/IconBh.svg';
+    instagramIcon.src = '../assets/images/IconInst.svg';
+  }
+}
+
+// Ejecutar al cargar la página
+updateSocialIcons();
+
+// Ejecutar cada vez que se redimensiona la ventana
+window.addEventListener('resize', updateSocialIcons);
+
+window.addEventListener('scroll', function () {
+  const scrollToTopButton = document.getElementById('scroll-to-top');
+
+  if (window.innerWidth >= 1024) {
+    // Ejecutar solo en pantallas de 1024px o más
+    if (window.scrollY > 300) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  } else {
+    scrollToTopButton.style.display = 'none';
+  }
+});
+
+document
+  .getElementById('scroll-to-top')
+  .addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
