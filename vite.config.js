@@ -11,13 +11,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        about: resolve(__dirname, 'src/html/about.html'),
-        contact: resolve(__dirname, 'src/html/contact.html'),
-        projects: resolve(__dirname, 'src/html/projects.html'),
         nuriva: resolve(__dirname, 'src/html/nuriva.html'),
         magazine: resolve(__dirname, 'src/html/magazine.html'),
-        travel: resolve(__dirname, 'src/html/travel.html'),
-        photomontage: resolve(__dirname, 'src/html/photomontage.html'),
+        nihonfest: resolve(__dirname, 'src/html/nihonfest.html'),
+        nuriarivas: resolve(__dirname, 'src/html/nuriarivas.html'),
+        doctorpad: resolve(__dirname, 'src/html/doctorpad.html'),
         holyweek: resolve(__dirname, 'src/html/holyweek.html')
         // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
       }

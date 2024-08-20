@@ -63,10 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Definir las rutas de las imágenes en una constante
   const imagePaths = {
-    image1: 'assets/images/project-nuriva.svg',
-    image2: './images/image2.jpg',
-    image3: './images/image3.jpg',
-    image4: './images/image4.jpg',
+    image1: 'assets/images/project-nuriva.png',
+    image2: 'assets/images/project-sushi.png',
+    image3: 'assets/images/project-nihon.png',
+    image4: 'assets/images/project-doctorpad.png',
     image5: './images/image5.jpg',
     image6: './images/image6.jpg'
   };

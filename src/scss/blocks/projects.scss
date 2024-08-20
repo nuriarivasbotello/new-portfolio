@@ -36,7 +36,7 @@
     overflow-x: hidden;
     cursor: pointer;
     @include responsive(desktop) {
-        width: 400px;
+        width: 420px;
         overflow-y: visible;
     }
 }
@@ -57,14 +57,18 @@
 }
 /* Imagen de hover en una posición fija */
 .project-hover-image {
-    overflow-x: hidden;
-    position: absolute;
-    top: 1280px; /* Ajusta la posición vertical según tus necesidades */
-    right: 330px; /* Ajusta la posición horizontal según tus necesidades */
-    display: none; /* Oculta la imagen por defecto */
-    z-index: 1000; /* Asegura que la imagen esté sobre otros elementos */
-    width: auto; /* Ajusta el tamaño de la imagen según tus necesidades */
-    height: auto; /* Mantiene la proporción de la imagen */
+    display: none;
+    @include responsive(desktop) {
+        overflow-x: hidden;
+        position: absolute;
+        top: 1340px;
+        right: 280px; 
+        display: none;
+        z-index: 1000;
+        width: auto;
+        height: auto;
+
+    }
 }
 
 /* Solo mostrar la imagen de hover en pantallas de escritorio */
