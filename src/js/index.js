@@ -124,25 +124,25 @@ function updateSocialIcons() {
 
   if (screenWidth < 768) {
     // Cambiar a iconos para móvil
-    gmailIcon.src = '../assets/images/IconGmailMvl.svg';
-    linkedinIcon.src = '../assets/images/IconLkMvl.svg';
-    githubIcon.src = '../assets/images/IconGitMvl.svg';
-    behanceIcon.src = '../assets/images/IconBhMvl.svg';
-    instagramIcon.src = '../assets/images/IconInstMvl.svg';
+    gmailIcon.src = 'assets/images/IconGmailMvl.svg';
+    linkedinIcon.src = 'assets/images/IconLkMvl.svg';
+    githubIcon.src = 'assets/images/IconGitMvl.svg';
+    behanceIcon.src = 'assets/images/IconBhMvl.svg';
+    instagramIcon.src = 'assets/images/IconInstMvl.svg';
   } else if (screenWidth < 1024) {
     // Cambiar a iconos para tablet
-    gmailIcon.src = '../assets/images/IconGmailMvl.svg';
-    linkedinIcon.src = '../assets/images/IconLkMvl.svg';
-    githubIcon.src = '../assets/images/IconGitMvl.svg';
-    behanceIcon.src = '../assets/images/IconBhMvl.svg';
-    instagramIcon.src = '../assets/images/IconInstMvl.svg';
+    gmailIcon.src = 'assets/images/IconGmailMvl.svg';
+    linkedinIcon.src = 'assets/images/IconLkMvl.svg';
+    githubIcon.src = 'assets/images/IconGitMvl.svg';
+    behanceIcon.src = 'assets/images/IconBhMvl.svg';
+    instagramIcon.src = 'assets/images/IconInstMvl.svg';
   } else {
     // Cambiar a iconos para desktop
-    gmailIcon.src = '../assets/images/IconGmail.svg';
-    linkedinIcon.src = '../assets/images/IconLk.svg';
-    githubIcon.src = '../assets/images/IconGit.svg';
-    behanceIcon.src = '../assets/images/IconBh.svg';
-    instagramIcon.src = '../assets/images/IconInst.svg';
+    gmailIcon.src = 'assets/images/IconGmail.svg';
+    linkedinIcon.src = 'assets/images/IconLk.svg';
+    githubIcon.src = 'assets/images/IconGit.svg';
+    behanceIcon.src = 'assets/images/IconBh.svg';
+    instagramIcon.src = 'assets/images/IconInst.svg';
   }
 }
 
