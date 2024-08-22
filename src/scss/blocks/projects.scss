@@ -40,6 +40,12 @@
         overflow-y: visible;
     }
 }
+.prueba{
+    @include responsive(desktop) {
+        width: 420px;
+        overflow-y: visible;
+    }
+}
 .project-details{
     position: relative;
     display: flex;
