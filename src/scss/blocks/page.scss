@@ -1,4 +1,20 @@
 @use '../mixins/responsive.scss' as *;
+.body-page{
+    color:var(--primary-color);
+    background-image: url('/assets/images/FondoBannerIzq.svg'), url('/assets/images/FondoBannerDrch.svg');
+        background-position: left 15%, right 25%;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 40% auto, 40% auto;
+        min-height: 100vh;
+    
+    @include responsive(desktop) {
+        background-image: url('/assets/images/FondoBannerIzq.svg'), url('/assets/images/FondoBannerDrch.svg');
+        background-position: left 40%, right 100%;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 15% auto, 20% auto;
+        background-repeat: no-repeat;
+    }
+}
 .back{
     display: flex;
     flex-direction: row;
@@ -65,7 +81,7 @@
         padding-left:150px;
     }
 }
-.first-section-page{
+.section-page{
     @include responsive(desktop) {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -127,4 +143,11 @@
     @include responsive(desktop) {
         font-size:20px;
     }
+}
+.mockup{
+    background-image: url('/assets/images/Ovalo.svg');
+        background-position:left center;
+        background-repeat: no-repeat;
+        background-size: 70% auto;
+    
 }

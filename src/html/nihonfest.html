@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
   </head>
-  <body>
+  <body class="body-page">
     <header>
       <a href="../index.html" class="back">
         <img src="../public/assets/images/ArrowLeft.png" alt="Arrow Left" class="arrowleft">
@@ -27,7 +27,7 @@
       </div>
     </banner>
     <main class="main-page">
-      <section class="first-section-page">
+      <section class="section-page">
         <div class="carousel-container">
           <div class="carousel-slide">
               <img src="../public/assets/images/Wireframes 1.png" alt="Imagen 1">
@@ -53,8 +53,55 @@
           </article>
         </div>
       </section>
+      <section class="section-page">
+        <div class="mockup">
+          <img src="../public/assets/images/NihonFestMockup.svg" />
+      </div>
+        <div class="article">
+          <article>
+            <h3 class="title-article">Research</h3>
+            <p class="text-article">Se buscó todas las posibles soluciones haciendo formularios y entrevistas y buscando información en sitios relevantes. Analizando otras aplicaciones para comprender cómo funcionaba la estructura convencional y poder aportar nuevas soluciones.</p>
+          </article>
+          <article>
+            <h3 class="title-article">Idea</h3>
+            <p class="text-article">Con la información obtenida, llegó el brainstorming. Información clara, organización, poder subir entradas. 
+              Una aplicación fácil de manejar y con un diseño atractivo.</p>
+          </article>
+          <article>
+            <h3 class="title-article">Lenguaje Visual</h3>
+            <p class="text-article">Tiene un estilo moderno pero recordando a la cultura japonesa. En modo oscuro con colores típicos para que resulte agradable a la vista y pensando siempre en la accesibilidad.</p>
+          </article>
+          <article>
+            <h3 class="title-article">Conclusiones</h3>
+            <p class="text-article">Nihon Fest podría ser de las pocas apps dedicadas a estos eventos. Cada vez se hace más complicado estar al día de todo por culpa de las rutinas, el trabajo y un largo etcétera.<br><br>
+              Debido a la fama que están ganando los eventos, estoy orgullosa de poder aportar mi granito de arena y facilitar muchas tareas a la comunidad. 
+              Podría ser el inicio de una app con muchas descargas y no se descarta añadir futuras funciones para hacerla más completa.</p>
+          </article>
+        </div>
+      </section>
+      <div class="contact" id="contact">
+        <div class="contact__header">
+          <h2 class="title-section">¿Te ha gustado?, ¡Contáctame!</h2>
+        </div>
+        <div class="social-links">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nuriarivasbotello@gmail.com&su=Información" target="_blank" class="social-item">
+            <img src="./assets/images/IconGmail.svg" alt="Gmail" class="social-icon" id="icon-gmail">
+            <span>nuriarivasbotello@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nuria-rivas-botello/" target="_blank" class="social-item" >
+            <img src="./assets/images/IconLk.svg" alt="Linkedin" class="social-icon" id="icon-linkedin">
+            <span>nuria-rivas-botello</span>
+          </a>
+        </div>
+        </div>
     </main>
-    
+    <footer class="footer">
+      <p>Forjado con la paciencia de un elfo y la determinación de un enano</p>
+      <p>© 2024 Nuria Rivas. Todos los derechos reservados.</p>
+      <a href="#" id="scroll-to-top">
+        <img src="assets/images/Arrow.svg" alt="Ir al inicio" id="scroll-icon">
+      </a>
+    </footer>
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
      <script>
       const slide = document.querySelector('.carousel-slide');

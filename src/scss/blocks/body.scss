@@ -2,14 +2,15 @@
 html {
 }
 body {
-    
+    height: 100vh; 
+    overflow-x: hidden;
+}
+.body{
     color:var(--primary-color);
     background-image: url('/assets/images/FondoBannerIzq.svg'), url('/assets/images/FondoBannerDrch.svg');
         background-position: left 15%, right 25%;
         background-repeat: no-repeat, no-repeat;
         background-size: 40% auto, 40% auto;
-    height: 100vh; 
-    overflow-x: hidden;
     min-height: 100vh;
     
     @include responsive(desktop) {
