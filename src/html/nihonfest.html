@@ -85,11 +85,11 @@
         </div>
         <div class="social-links">
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nuriarivasbotello@gmail.com&su=Información" target="_blank" class="social-item">
-            <img src="../public/assets/images/IconGmail.svg" alt="Gmail" class="social-icon" id="icon-gmail">
+            <img src="../public/assets/images/IconGmail.svg" alt="Gmail" class="social-icon" id="icon-gmail-page">
             <span>nuriarivasbotello@gmail.com</span>
           </a>
           <a href="https://www.linkedin.com/in/nuria-rivas-botello/" target="_blank" class="social-item" >
-            <img src="../public/assets/images/IconLk.svg" alt="Linkedin" class="social-icon" id="icon-linkedin">
+            <img src="../public/assets/images/IconLk.svg" alt="Linkedin" class="social-icon" id="icon-linkedin-page">
             <span>nuria-rivas-botello</span>
           </a>
         </div>
@@ -135,8 +135,8 @@ window.addEventListener('resize', () => {
 function updateSocialIcons() {
   const screenWidth = window.innerWidth;
 
-  const gmailIcon = document.getElementById('icon-gmail');
-  const linkedinIcon = document.getElementById('icon-linkedin');
+  const gmailIcon = document.getElementById('icon-gmail-page');
+  const linkedinIcon = document.getElementById('icon-linkedin-page');
   if (screenWidth < 768) {
     // Cambiar a iconos para móvil
     gmailIcon.src = '../public/assets/images/IconGmailMvl.svg';
