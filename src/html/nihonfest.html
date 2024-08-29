@@ -55,7 +55,7 @@
       </section>
       <section class="section-page">
         <div class="mockup">
-          <img src="../public/assets/images/NihonFestMockup.svg" />
+          <img class="mockup__image" src="../public/assets/images/NihonFestMockup.svg" />
       </div>
         <div class="article">
           <article>
@@ -80,16 +80,16 @@
         </div>
       </section>
       <div class="contact" id="contact">
-        <div class="contact__header">
+        <div class="header-project">
           <h2 class="title-section">¿Te ha gustado?, ¡Contáctame!</h2>
         </div>
         <div class="social-links">
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nuriarivasbotello@gmail.com&su=Información" target="_blank" class="social-item">
-            <img src="./assets/images/IconGmail.svg" alt="Gmail" class="social-icon" id="icon-gmail">
+            <img src="../public/assets/images/IconGmail.svg" alt="Gmail" class="social-icon" id="icon-gmail">
             <span>nuriarivasbotello@gmail.com</span>
           </a>
           <a href="https://www.linkedin.com/in/nuria-rivas-botello/" target="_blank" class="social-item" >
-            <img src="./assets/images/IconLk.svg" alt="Linkedin" class="social-icon" id="icon-linkedin">
+            <img src="../public/assets/images/IconLk.svg" alt="Linkedin" class="social-icon" id="icon-linkedin">
             <span>nuria-rivas-botello</span>
           </a>
         </div>
@@ -98,9 +98,6 @@
     <footer class="footer">
       <p>Forjado con la paciencia de un elfo y la determinación de un enano</p>
       <p>© 2024 Nuria Rivas. Todos los derechos reservados.</p>
-      <a href="#" id="scroll-to-top">
-        <img src="assets/images/Arrow.svg" alt="Ir al inicio" id="scroll-icon">
-      </a>
     </footer>
     <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
      <script>
@@ -135,6 +132,31 @@ window.addEventListener('resize', () => {
     imageWidth = slide.clientWidth / totalImages;
     slide.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
 });
+function updateSocialIcons() {
+  const screenWidth = window.innerWidth;
+
+  const gmailIcon = document.getElementById('icon-gmail');
+  const linkedinIcon = document.getElementById('icon-linkedin');
+  if (screenWidth < 768) {
+    // Cambiar a iconos para móvil
+    gmailIcon.src = '../public/assets/images/IconGmailMvl.svg';
+    linkedinIcon.src = '../public/assets/images/IconLkMvl.svg';
+  } else if (screenWidth < 1024) {
+    // Cambiar a iconos para tablet
+    gmailIcon.src = '../public/assets/images/IconGmailMvl.svg';
+    linkedinIcon.src = '../public/assets/images/IconLkMvl.svg';
+  } else {
+    // Cambiar a iconos para desktop
+    gmailIcon.src = '../public/assets/images/IconGmail.svg';
+    linkedinIcon.src = '../public/assets/images/IconLk.svg';
+  }
+}
+
+// Ejecutar al cargar la página
+updateSocialIcons();
+
+// Ejecutar cada vez que se redimensiona la ventana
+window.addEventListener('resize', updateSocialIcons);
      </script>
     <script type="module" src="../js/index.js"></script>
   </body>
