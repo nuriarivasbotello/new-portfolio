@@ -126,37 +126,6 @@ function showNextImage() {
 }
 
 setInterval(showNextImage, 3000); // Cambia la imagen cada 3 segundos
-
-// Recalcula el ancho de la imagen y el desplazamiento cuando se cambia el tamaño de la ventana
-window.addEventListener('resize', () => {
-    imageWidth = slide.clientWidth / totalImages;
-    slide.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
-});
-function updateSocialIconsPage() {
-  const screenWidth = window.innerWidth;
-
-  const gmailIcon = document.getElementById('icon-gmail-page');
-  const linkedinIcon = document.getElementById('icon-linkedin-page');
-  if (screenWidth < 768) {
-    // Cambiar a iconos para móvil
-    gmailIcon.src = '../public/assets/images/IconGmailMvl.svg';
-    linkedinIcon.src = '../public/assets/images/IconLkMvl.svg';
-  } else if (screenWidth < 1024) {
-    // Cambiar a iconos para tablet
-    gmailIcon.src = '../public/assets/images/IconGmailMvl.svg';
-    linkedinIcon.src = '../public/assets/images/IconLkMvl.svg';
-  } else {
-    // Cambiar a iconos para desktop
-    gmailIcon.src = '../public/assets/images/IconGmail.svg';
-    linkedinIcon.src = '../public/assets/images/IconLk.svg';
-  }
-}
-
-// Ejecutar al cargar la página
-updateSocialIconsPage();
-
-// Ejecutar cada vez que se redimensiona la ventana
-window.addEventListener('resize', updateSocialIconsPage);
      </script>
     <script type="module" src="../js/index.js"></script>
   </body>
