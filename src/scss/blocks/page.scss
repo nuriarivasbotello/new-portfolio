@@ -164,3 +164,24 @@
         }
     
 }
+.first-look{
+width: 300px;
+display: flex;
+flex-direction: column;
+padding-top:60px;
+gap:40px;
+@include responsive(desktop) {
+    gap:20px;
+        position: absolute;
+        justify-content: center;
+        width: 500px;
+        right:200px;
+        bottom:450px;
+    }
+}
+.btn-page{
+    margin:auto;
+    @include responsive(desktop) {
+        margin:auto;
+    }
+}
