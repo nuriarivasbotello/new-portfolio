@@ -64,6 +64,7 @@
 /* Imagen de hover en una posición fija */
 .project-hover-image {
     display: none;
+    z-index:-1;
     @include responsive(desktop) {
         overflow-x: hidden;
         position: absolute;
@@ -79,13 +80,9 @@
 
 /* Solo mostrar la imagen de hover en pantallas de escritorio */
 @media (min-width: 768px) {
-    /* Mostrar solo en pantallas grandes */
-    .project-hover-image {
-      display: block; /* Mostrar la imagen al hacer hover */
-    }}
-    .prueba{
+    
+    .project-info:hover .project-hover-image {
         display: none;
-        @include responsive(desktop) {
-            display: block;
-        }
+        z-index:-1;
     }
+}
