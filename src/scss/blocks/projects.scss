@@ -44,6 +44,7 @@
     @include responsive(desktop) {
         width: 26.25rem;
         overflow-y: visible;
+        cursor: pointer;
     }
 }
 .project-details{
@@ -52,8 +53,8 @@
     flex-direction: row;
     overflow-x: hidden;
     gap:1.25rem;
-    flex: 1; /* Ocupa todo el espacio disponible */
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    flex: 1;
+    white-space: nowrap; 
     font-size:0.975rem;
     font-family: 'Roboto', sans-serif;
     @include responsive(desktop) {
@@ -61,26 +62,28 @@
         font-size:1.125rem;
     }
 }
-/* Imagen de hover en una posición fija */
-.project-hover-image {
-    display: none;
-    @include responsive(desktop) {
-        overflow-x: hidden;
-        position: absolute;
-        top: 83.75rem;
-        right: 17.5rem; 
-        display: none;
-        z-index: 1000;
-        width: auto;
-        height: auto;
 
+.hover-image {
+    position: absolute; /* Cambia a fixed para que no se mueva */
+    display: none; /* Oculta por defecto */
+    
+    top: 1250px; /* Ajusta la posición vertical según sea necesario */
+    left: 1100px; /* Ajusta la posición horizontal según sea necesario */
+}
+
+.hover-image img {
+    @include responsive(desktop) {
+        max-width:90%;
     }
 }
 
-/* Solo mostrar la imagen de hover en pantallas de escritorio */
-@media (min-width: 768px) {
-    
-    .project-info:hover .project-hover-image {
-        display: block;
+
+@media (max-width: 768px) {
+    .hover-image {
+        display: none;
+    }
+
+    .project:hover {
+        background-color: transparent; 
     }
 }

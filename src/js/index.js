@@ -27,69 +27,60 @@ buttons.forEach(button => {
     button.classList.remove('active');
   });
 });
-// Función para gestionar el tamaño de la ventana
-const handleResize = () => {
-  const menu = document.getElementById('menu');
 
-  if (window.innerWidth <= 768) {
-    // Pantallas pequeñas (móviles)
-    menu.style.display = 'none'; // Asegura que el menú está oculto en móviles
-  } else {
-    // Pantallas grandes (escritorio)
-    menu.style.display = 'flex'; // Muestra el menú en pantallas grandes
-  }
+const images = {
+  image1: 'assets/images/project-nuriva.png',
+  image2: 'assets/images/project-sushi.png',
+  image3: 'assets/images/project-nihon.png',
+  image4: 'assets/images/project-doctorpad.png',
+  image5: './images/image5.jpg',
+  image6: './images/image6.jpg'
 };
-document.querySelectorAll('.item').forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    const imageUrl = item.getAttribute('data-image');
-    const hoverImage = item.querySelector('.hover-image');
-    hoverImage.style.backgroundImage = `url('${imageUrl}')`;
-    hoverImage.style.display = 'block';
-  });
+document.querySelectorAll('.project').forEach(project => {
+  const link = project.querySelector('.project-info');
 
-  item.addEventListener('mouseleave', () => {
-    const hoverImage = item.querySelector('.hover-image');
-    hoverImage.style.display = 'none';
+  // Solo añade el evento si el ancho de la ventana es mayor a 768px
+  if (window.innerWidth > 768) {
+    project.addEventListener('mouseenter', e => {
+      const imgKey = link.getAttribute('data-image'); // Obtiene el identificador de la imagen del atributo data-image
+
+      const hoverImg = document.getElementById('hover-img');
+      hoverImg.src = images[imgKey]; // Obtiene la ruta de la imagen usando el identificador
+
+      const hoverImageDiv = document.querySelector('.hover-image');
+      hoverImageDiv.style.display = 'block'; // Muestra la imagen
+    });
+
+    project.addEventListener('mouseleave', () => {
+      const hoverImageDiv = document.querySelector('.hover-image');
+      hoverImageDiv.style.display = 'none'; // Oculta la imagen
+    });
+  }
+
+  // Manejo del clic en dispositivos móviles
+  project.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
+      const hoverImageDiv = document.querySelector('.hover-image');
+      hoverImageDiv.style.display = 'none'; // Asegúrate de ocultar la imagen
+      // No se llama a e.preventDefault() para que el enlace funcione
+    }
   });
 });
 
-// Llama a handleResize en la carga inicial y en cada cambio de tamaño
-window.addEventListener('load', handleResize);
-window.addEventListener('resize', handleResize);
-
-document.addEventListener('DOMContentLoaded', function () {
-  const projectInfos = document.querySelectorAll('.project-info');
-  const hoverImage = document.getElementById('hover-image');
-
-  // Definir las rutas de las imágenes en una constante
-  const imagePaths = {
-    image1: 'assets/images/project-nuriva.png',
-    image2: 'assets/images/project-sushi.png',
-    image3: 'assets/images/project-nihon.png',
-    image4: 'assets/images/project-doctorpad.png',
-    image5: './images/image5.jpg',
-    image6: './images/image6.jpg'
-  };
-
-  function handleMouseEnter(event) {
-    const projectInfo = event.currentTarget;
-    const imageKey = projectInfo.dataset.image;
-    const imageUrl = imagePaths[imageKey];
-
-    // Actualizar y mostrar la imagen de hover
-    hoverImage.src = imageUrl;
-    hoverImage.style.display = 'block';
+// Añadir un evento de resize para manejar la adaptación del hover en caso de cambiar el tamaño de la ventana
+window.addEventListener('resize', () => {
+  const hoverImageDiv = document.querySelector('.hover-image');
+  if (window.innerWidth <= 768) {
+    hoverImageDiv.style.display = 'none'; // Asegúrate de ocultar la imagen en móviles
   }
+});
 
-  function handleMouseLeave() {
-    // Ocultar la imagen de hover
-    hoverImage.style.display = 'none';
+// Añadir un evento de resize para manejar la adaptación del hover en caso de cambiar el tamaño de la ventana
+window.addEventListener('resize', () => {
+  const hoverImageDiv = document.querySelector('.hover-image');
+  if (window.innerWidth <= 768) {
+    hoverImageDiv.style.display = 'none'; // Asegúrate de ocultar la imagen en móviles
   }
-
-  projectInfos.forEach(info => {
-    info.addEventListener('mouseenter', handleMouseEnter);
-    info.addEventListener('mouseleave', handleMouseLeave);
-  });
 });
 
 mainImage.addEventListener('click', function () {
