@@ -76,10 +76,3 @@
 
     }
 }
-
-    .container-hover{
-        display: none;
-        @include responsive(desktop) {
-            display: block;
-        }
-    }
