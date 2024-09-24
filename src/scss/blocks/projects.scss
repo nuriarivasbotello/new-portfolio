@@ -76,3 +76,16 @@
 
     }
 }
+
+/* Solo mostrar la imagen de hover en pantallas de escritorio */
+@media (min-width: 768px) {
+    /* Mostrar solo en pantallas grandes */
+    .project-hover-image {
+      display: block; /* Mostrar la imagen al hacer hover */
+    }}
+    .prueba{
+        display: none;
+        @include responsive(desktop) {
+            display: block;
+        }
+    }
