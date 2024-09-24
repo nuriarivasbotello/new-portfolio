@@ -51,10 +51,10 @@
     display: flex;
     flex-direction: row;
     overflow-x: hidden;
-    gap:1rem;
+    gap:1.25rem;
     flex: 1; /* Ocupa todo el espacio disponible */
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size:0.970rem;
+    font-size:0.975rem;
     font-family: 'Roboto', sans-serif;
     @include responsive(desktop) {
         gap:1.875rem;
@@ -64,7 +64,6 @@
 /* Imagen de hover en una posición fija */
 .project-hover-image {
     display: none;
-    z-index:-1;
     @include responsive(desktop) {
         overflow-x: hidden;
         position: absolute;
@@ -82,7 +81,6 @@
 @media (min-width: 768px) {
     
     .project-info:hover .project-hover-image {
-        display: none;
-        z-index:-1;
+        display: block;
     }
 }
