@@ -185,3 +185,11 @@ gap:40px;
         margin:auto;
     }
 }
+.mockup-move{
+    @include responsive(desktop) {
+        position: relative;
+        top:140px;
+        right:80px;
+    }
+
+}

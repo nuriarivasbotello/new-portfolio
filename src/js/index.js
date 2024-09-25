@@ -33,7 +33,7 @@ const images = {
   image2: 'assets/images/project-sushi.png',
   image3: 'assets/images/project-nihon.png',
   image4: 'assets/images/project-doctorpad.png',
-  image5: './images/image5.jpg',
+  image5: 'assets/images/mockupweb.png',
   image6: './images/image6.jpg'
 };
 document.querySelectorAll('.project').forEach(project => {
